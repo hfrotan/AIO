@@ -78,5 +78,65 @@
     "pattern": "(?<![A-Za-z0-9])(OVID|PLUTO|SHOUT|SLING|TOPIC)(?=[.\\-_\\s]WEB(?:[-.]?(?:DL|Rip|RIP))?(?![A-Za-z0-9]))",
     "name": "Free+",
     "score": 50
+  },
+  {
+    "pattern": "(?<![A-Za-z0-9])WEB[-._ ]?DL(?![A-Za-z0-9])",
+    "name": "WEB-DL",
+    "score": 100
+  },
+  {
+    "pattern": "(?<![A-Za-z0-9])WEB[-._ ]?[Rr][Ii][Pp](?![A-Za-z0-9])",
+    "name": "WEBRip",
+    "score": 40
+  },
+  {
+    "pattern": "(?<![A-Za-z0-9])([Rr][Ee][Mm][Uu][Xx])(?![A-Za-z0-9])",
+    "name": "Remux",
+    "score": 150
+  },
+  {
+    "pattern": "(?<![A-Za-z0-9])([Bb][Ll][Uu][-._ ]?[Rr][Aa][Yy]|BDREMUX|BD25|BD50)(?![A-Za-z0-9])",
+    "name": "BluRay",
+    "score": 80
+  },
+  {
+    "pattern": "(?<![A-Za-z0-9])(CAM|HDCAM|HQCAM|CAM[Rr][Ii][Pp]|TS|HDTS|TELESYNC|TSRIP|TC|HDTC|TELECINE|SCR|SCREENER|DVDSCR|DVDSCREENER|WORKPRINT|WP)(?![A-Za-z0-9])",
+    "name": "Cam-Telesync-Screener",
+    "score": -2000
+  },
+  {
+    "pattern": "(?<![A-Za-z0-9])AV1(?![A-Za-z0-9])",
+    "name": "AV1-unplayable",
+    "score": -2000
+  },
+  {
+    "pattern": "(?<![A-Za-z0-9])(HC|KORSUB|HARDSUB(S)?)(?![A-Za-z0-9])",
+    "name": "Hardcoded-subs",
+    "score": -500
+  },
+  {
+    "pattern": "(?<![A-Za-z0-9])HD[Rr][Ii][Pp](?![A-Za-z0-9])",
+    "name": "HDRip-reencode",
+    "score": -300
+  },
+  {
+    "pattern": "(?<![A-Za-z0-9])(YTS|YIFY)(?![A-Za-z0-9])",
+    "name": "Low-bitrate-groups",
+    "score": -200
+  },
+  {
+    "pattern": "(?<![A-Za-z0-9])(DVD[Rr][Ii][Pp]|DVDR|XVID|DIVX)(?![A-Za-z0-9])",
+    "name": "DVD-era",
+    "score": -150
+  },
+  {
+    "pattern": "(?<![A-Za-z0-9])(HDTV|PDTV|SDTV|TVRIP|SATRIP|DSR)(?![A-Za-z0-9])",
+    "name": "TV-capture",
+    "score": -50
+  },
+  {
+    "pattern": "(?<![A-Za-z0-9])SAMPLE(?![A-Za-z0-9])",
+    "name": "Sample",
+    "score": -2000
   }
 ]
