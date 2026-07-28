@@ -120,11 +120,6 @@
     "score": -300
   },
   {
-    "pattern": "(?<![A-Za-z0-9])(YTS|YIFY)(?![A-Za-z0-9])",
-    "name": "Low-bitrate-groups",
-    "score": -200
-  },
-  {
     "pattern": "(?<![A-Za-z0-9])(DVD[Rr][Ii][Pp]|DVDR|XVID|DIVX)(?![A-Za-z0-9])",
     "name": "DVD-era",
     "score": -150
@@ -138,5 +133,50 @@
     "pattern": "(?<![A-Za-z0-9])SAMPLE(?![A-Za-z0-9])",
     "name": "Sample",
     "score": -2000
+  },
+  {
+    "pattern": "(?<![A-Za-z0-9])(PROPER|REPACK|RERIP)(?![A-Za-z0-9])",
+    "name": "Proper-Repack",
+    "score": 40
+  },
+  {
+    "pattern": "-(?:ABBiE|AJP69|APEX|PAXA|PEXA|XEPA|BLUTONiUM|BYNDR|CMRG|CRFW|CRUD|FLUX|GNOME|HONE|KiNGS|Kitsune|MADSKY|NOSiViD|NTb|NTG|RAWR|SiC|TEPES|TheFarm|ZoroSenpai)(?![A-Za-z0-9])",
+    "name": "Web-group-tier1",
+    "score": 100
+  },
+  {
+    "pattern": "-(?:dB|Flights|MiU|monkee|MZABI|PHOENiX|playWEB|SbR|SMURF|TOMMY|XEBEC|4KBEC|CEBEX|CiT|EPSiLON|SuccessfulCrab)(?![A-Za-z0-9])",
+    "name": "Web-group-tier2",
+    "score": 80
+  },
+  {
+    "pattern": "-(?:BLOOM|Dooky|GNOMiSSiON|HHWEB|NINJACENTRAL|NPMS|ROCCaT|SiGMA|SLiGNOME|SwAgLaNdEr)(?![A-Za-z0-9])",
+    "name": "Web-group-tier3",
+    "score": 60
+  },
+  {
+    "pattern": "-(?:Telly|Archie|DUS|NEXT|MagicStar)(?![A-Za-z0-9])",
+    "name": "Intl-web-groups",
+    "score": 80
+  },
+  {
+    "pattern": "(?:\\[|-)(?:Arg0|Arid|Baws|FLE|LostYears|LYS1TH3A|McBalls|sam|SCY|Setsugen|smol|SoM|Vodes|Z4ST1N|ZeroBuild|0x539|Asakura|BlackRose|Cyan|Cytox|Dae|Foxtrot|Gao|Half-Baked|HatSubs|MALD|MTBB|Okay-Subs|Pizza|Reza|Slyfox|SoLCE|tenshi|AnoZu|SubsPlus)(?:\\]|(?![A-Za-z0-9]))",
+    "name": "Anime-groups-top",
+    "score": 70
+  },
+  {
+    "pattern": "(?:\\[|-)(?:Erai-raws|ToonsHub|VARYG|BlueLobster|HorribleSubs|HorribleRips|KAN3D2M|KiyoshiStar|Lia|NanDesuKa|SobsPlease|Some-Stuffs|SubsPlease|URANIME|9volt|Asenshi|Chihiro|Commie|DameDesuYo|Doki|GJM|Kaleido|Kantai|KawaSubs|Tsundere)(?:\\]|(?![A-Za-z0-9]))",
+    "name": "Anime-groups-std",
+    "score": 40
+  },
+  {
+    "pattern": "(?:\\[|-)(?:24xHD|41RGB|4K4U|AROMA|aXXo|AZAZE|BARC0DE|BAUCKLEY|beAst|C1NEM4|C4K|CDDHD|CHAOS|CHD|CLEANUP|COLLECTiVE|CREATiVE24|CrEwSaDe|CTFOH|d3g|DDR|DNL|EuReKA|FaNGDiNG0|Feranki1980|FGT|FMD|FRDS|FZHD|GalaxyRG|GalaxyTV|GHD|GPTHD|HDTime|HDWinG|iNTENSO|iPlanet|iVy|JFF|KiNGDOM|KIRA|L0SERNIGHT|LAMA|Leffe|Liber8|LiGaS|LUCY|MarkII|MeGusta|Mesc|mHD|mSD|MTeam|MySiLU|NhaNc3|nHD|nikt0|NoGrp|NoGroup|nSD|OFT|Pahe|PATOMiEL|PRODJi|PSA|PTNK|RARBG|rarbg|RBB|RDN|Rifftrax|RU4HD|SANTi|ShieldBearer|STUTTERSHIT|SUNSCREEN|SyncUP|TEKNO3D|Tigole|TIKO|VISIONPLUSHDR|x0r|YIFY|YTS|Zeus|ION10|BiTOR|TeeWee|SWTYBLZ|Will1869|PiRaTeS|D3US|BEN[ ._-]THE[ ._-]MEN)(?:\\]|(?![A-Za-z0-9]))",
+    "name": "LQ-groups",
+    "score": -200
+  },
+  {
+    "pattern": "(?<![A-Za-z0-9])(?:Vegamovies|VEGAMOVIES|HDHub4u|HDHUB4U|Moviesflix|TheMoviesflix|MoviesMod|Filmyzilla|Filmywap|Filmy4wap|Bolly4u|KatmovieHD|Katmovie|9xmovies|MLWBD|Betamovies|7StarHD|Ethmoviez|Cinevood|MkvCinemas|DesireMovies|SSRmovies|SSRMovies|Movierulz|Tamilrockers|TamilMV|TamilBlasters|Isaimini|Kuttymovies|Moviesda|Tamilyogi|HDMoviesHub|SkymoviesHD|Themoviehubs|1XBET|EZTV|eztvx?|rartv|TGx)(?![A-Za-z0-9])",
+    "name": "Site-retags",
+    "score": -300
   }
 ]
