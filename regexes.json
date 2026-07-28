@@ -1,12 +1,12 @@
 [
   {
     "pattern": "(?<![A-Za-z0-9])(ACRN|AMAZON|AMAZONHD|AMCP|AMZN|APPLETV|APTV|ATVP|BCORE|BRIT|CRAV|CRAVE|CRUNCHYROLL|DISNEYPLUS|DSCP|DSNP|DSNPHS|DSNY|EPIX|HBO|HBOM|HBOMAX|HMAX|HULU|ITUNES|MGM\\+|MUBI|NETFLIX|NETFLIXHD|NETFLIXUHD|NF|NFLX|PARA|PCOK|PEACOCK|PMTP|PMTV|SHDR|SHOWTIME|SHUDDER|STARZ|STZ)(?![A-Za-z0-9])",
-    "name": "Global",
+    "name": "Premium",
     "score": 300
   },
   {
     "pattern": "(?<![A-Za-z0-9])((?<![Hh][Dd][.\\-_\\s])MA|AMC|ATV|CR|FX|FXX|HUL|iP|iT|MAX|MTV|NOW|PLAY|RED|SHO)(?=[.\\-_\\s]WEB(?:[-.]?(?:DL|Rip|RIP))?(?![A-Za-z0-9]))",
-    "name": "Global+",
+    "name": "Premium+",
     "score": 300
   },
   {
@@ -91,7 +91,7 @@
   },
   {
     "pattern": "(?<![A-Za-z0-9])([Rr][Ee][Mm][Uu][Xx])(?![A-Za-z0-9])",
-    "name": "Remux",
+    "name": "REMUX",
     "score": 150
   },
   {
@@ -101,32 +101,32 @@
   },
   {
     "pattern": "(?<![A-Za-z0-9])(CAM|HDCAM|HQCAM|CAM[Rr][Ii][Pp]|TS|HDTS|TELESYNC|TSRIP|TC|HDTC|TELECINE|SCR|SCREENER|DVDSCR|DVDSCREENER|WORKPRINT|WP)(?![A-Za-z0-9])",
-    "name": "Cam-Telesync-Screener",
+    "name": "CAM-Rip",
     "score": -2000
   },
   {
     "pattern": "(?<![A-Za-z0-9])AV1(?![A-Za-z0-9])",
-    "name": "AV1-unplayable",
+    "name": "AV1",
     "score": -2000
   },
   {
     "pattern": "(?<![A-Za-z0-9])(HC|KORSUB|HARDSUB(S)?)(?![A-Za-z0-9])",
-    "name": "Hardcoded-subs",
+    "name": "HardSubs",
     "score": -500
   },
   {
     "pattern": "(?<![A-Za-z0-9])HD[Rr][Ii][Pp](?![A-Za-z0-9])",
-    "name": "HDRip-reencode",
+    "name": "HDRip",
     "score": -300
   },
   {
     "pattern": "(?<![A-Za-z0-9])(DVD[Rr][Ii][Pp]|DVDR|XVID|DIVX)(?![A-Za-z0-9])",
-    "name": "DVD-era",
+    "name": "DVD",
     "score": -150
   },
   {
     "pattern": "(?<![A-Za-z0-9])(HDTV|PDTV|SDTV|TVRIP|SATRIP|DSR)(?![A-Za-z0-9])",
-    "name": "TV-capture",
+    "name": "TVRip",
     "score": -50
   },
   {
@@ -135,48 +135,53 @@
     "score": -2000
   },
   {
+    "pattern": "(?<![A-Za-z0-9])((AI[-._ ]?)?[Uu][Pp][Ss][Cc][Aa][Ll][Ee][Dd]?|AIUPSCALE)(?![A-Za-z0-9])",
+    "name": "Upscaled",
+    "score": -300
+  },
+  {
     "pattern": "(?<![A-Za-z0-9])(PROPER|REPACK|RERIP)(?![A-Za-z0-9])",
-    "name": "Proper-Repack",
+    "name": "REPACK",
     "score": 40
   },
   {
     "pattern": "-(?:ABBiE|AJP69|APEX|PAXA|PEXA|XEPA|BLUTONiUM|BYNDR|CMRG|CRFW|CRUD|FLUX|GNOME|HONE|KiNGS|Kitsune|MADSKY|NOSiViD|NTb|NTG|RAWR|SiC|TEPES|TheFarm|ZoroSenpai)(?![A-Za-z0-9])",
-    "name": "Web-group-tier1",
+    "name": "🥇Group",
     "score": 100
   },
   {
     "pattern": "-(?:dB|Flights|MiU|monkee|MZABI|PHOENiX|playWEB|SbR|SMURF|TOMMY|XEBEC|4KBEC|CEBEX|CiT|EPSiLON|SuccessfulCrab)(?![A-Za-z0-9])",
-    "name": "Web-group-tier2",
+    "name": "🥈Group",
     "score": 80
   },
   {
     "pattern": "-(?:BLOOM|Dooky|GNOMiSSiON|HHWEB|NINJACENTRAL|NPMS|ROCCaT|SiGMA|SLiGNOME|SwAgLaNdEr)(?![A-Za-z0-9])",
-    "name": "Web-group-tier3",
+    "name": "🥉Group",
     "score": 60
   },
   {
     "pattern": "-(?:Telly|Archie|DUS|NEXT|MagicStar)(?![A-Za-z0-9])",
-    "name": "Intl-web-groups",
+    "name": "🌏Group",
     "score": 80
   },
   {
     "pattern": "(?:\\[|-)(?:Arg0|Arid|Baws|FLE|LostYears|LYS1TH3A|McBalls|sam|SCY|Setsugen|smol|SoM|Vodes|Z4ST1N|ZeroBuild|0x539|Asakura|BlackRose|Cyan|Cytox|Dae|Foxtrot|Gao|Half-Baked|HatSubs|MALD|MTBB|Okay-Subs|Pizza|Reza|Slyfox|SoLCE|tenshi|AnoZu|SubsPlus)(?:\\]|(?![A-Za-z0-9]))",
-    "name": "Anime-groups-top",
+    "name": "🎌Elite",
     "score": 70
   },
   {
     "pattern": "(?:\\[|-)(?:Erai-raws|ToonsHub|VARYG|BlueLobster|HorribleSubs|HorribleRips|KAN3D2M|KiyoshiStar|Lia|NanDesuKa|SobsPlease|Some-Stuffs|SubsPlease|URANIME|9volt|Asenshi|Chihiro|Commie|DameDesuYo|Doki|GJM|Kaleido|Kantai|KawaSubs|Tsundere)(?:\\]|(?![A-Za-z0-9]))",
-    "name": "Anime-groups-std",
+    "name": "🎌Group",
     "score": 40
   },
   {
     "pattern": "(?:\\[|-)(?:24xHD|41RGB|4K4U|AROMA|aXXo|AZAZE|BARC0DE|BAUCKLEY|beAst|C1NEM4|C4K|CDDHD|CHAOS|CHD|CLEANUP|COLLECTiVE|CREATiVE24|CrEwSaDe|CTFOH|d3g|DDR|DNL|EuReKA|FaNGDiNG0|Feranki1980|FGT|FMD|FRDS|FZHD|GalaxyRG|GalaxyTV|GHD|GPTHD|HDTime|HDWinG|iNTENSO|iPlanet|iVy|JFF|KiNGDOM|KIRA|L0SERNIGHT|LAMA|Leffe|Liber8|LiGaS|LUCY|MarkII|MeGusta|Mesc|mHD|mSD|MTeam|MySiLU|NhaNc3|nHD|nikt0|NoGrp|NoGroup|nSD|OFT|Pahe|PATOMiEL|PRODJi|PSA|PTNK|RARBG|rarbg|RBB|RDN|Rifftrax|RU4HD|SANTi|ShieldBearer|STUTTERSHIT|SUNSCREEN|SyncUP|TEKNO3D|Tigole|TIKO|VISIONPLUSHDR|x0r|YIFY|YTS|Zeus|ION10|BiTOR|TeeWee|SWTYBLZ|Will1869|PiRaTeS|D3US|BEN[ ._-]THE[ ._-]MEN)(?:\\]|(?![A-Za-z0-9]))",
-    "name": "LQ-groups",
+    "name": "🗑️Group",
     "score": -200
   },
   {
     "pattern": "(?<![A-Za-z0-9])(?:Vegamovies|VEGAMOVIES|HDHub4u|HDHUB4U|Moviesflix|TheMoviesflix|MoviesMod|Filmyzilla|Filmywap|Filmy4wap|Bolly4u|KatmovieHD|Katmovie|9xmovies|MLWBD|Betamovies|7StarHD|Ethmoviez|Cinevood|MkvCinemas|DesireMovies|SSRmovies|SSRMovies|Movierulz|Tamilrockers|TamilMV|TamilBlasters|Isaimini|Kuttymovies|Moviesda|Tamilyogi|HDMoviesHub|SkymoviesHD|Themoviehubs|1XBET|EZTV|eztvx?|rartv|TGx)(?![A-Za-z0-9])",
-    "name": "Site-retags",
+    "name": "🚫SiteRip",
     "score": -300
   }
 ]
