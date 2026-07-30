@@ -1,0 +1,202 @@
+[
+  {
+    "expression": "/*Premium*/ regexMatched(streams, 'premium')",
+    "score": 300,
+    "enabled": true
+  },
+  {
+    "expression": "/*Premium+*/ regexMatched(streams, 'premium-plus')",
+    "score": 300,
+    "enabled": true
+  },
+  {
+    "expression": "/*Europe*/ regexMatched(streams, 'europe')",
+    "score": 200,
+    "enabled": true
+  },
+  {
+    "expression": "/*Europe+*/ regexMatched(streams, 'europe-plus')",
+    "score": 200,
+    "enabled": true
+  },
+  {
+    "expression": "/*LatAm*/ regexMatched(streams, 'latam')",
+    "score": 200,
+    "enabled": true
+  },
+  {
+    "expression": "/*India*/ regexMatched(streams, 'india')",
+    "score": 200,
+    "enabled": true
+  },
+  {
+    "expression": "/*India+*/ regexMatched(streams, 'india-plus')",
+    "score": 200,
+    "enabled": true
+  },
+  {
+    "expression": "/*Asia*/ regexMatched(streams, 'asia')",
+    "score": 200,
+    "enabled": true
+  },
+  {
+    "expression": "/*Asia+*/ regexMatched(streams, 'asia-plus')",
+    "score": 200,
+    "enabled": true
+  },
+  {
+    "expression": "/*Mideast*/ regexMatched(streams, 'mideast')",
+    "score": 200,
+    "enabled": true
+  },
+  {
+    "expression": "/*Mideast+*/ regexMatched(streams, 'mideast-plus')",
+    "score": 200,
+    "enabled": true
+  },
+  {
+    "expression": "/*Africa*/ regexMatched(streams, 'africa')",
+    "score": 200,
+    "enabled": true
+  },
+  {
+    "expression": "/*Cable*/ regexMatched(streams, 'cable')",
+    "score": 100,
+    "enabled": true
+  },
+  {
+    "expression": "/*Cable+*/ regexMatched(streams, 'cable-plus')",
+    "score": 100,
+    "enabled": true
+  },
+  {
+    "expression": "/*Free*/ regexMatched(streams, 'free')",
+    "score": 50,
+    "enabled": true
+  },
+  {
+    "expression": "/*Free+*/ regexMatched(streams, 'free-plus')",
+    "score": 50,
+    "enabled": true
+  },
+  {
+    "expression": "/*WEB-DL*/ regexMatched(streams, 'web-dl')",
+    "score": 100,
+    "enabled": true
+  },
+  {
+    "expression": "/*WEBRip*/ regexMatched(streams, 'webrip')",
+    "score": 40,
+    "enabled": true
+  },
+  {
+    "expression": "/*REMUX*/ regexMatched(streams, 'remux')",
+    "score": 150,
+    "enabled": true
+  },
+  {
+    "expression": "/*BluRay*/ regexMatched(streams, 'bluray')",
+    "score": 80,
+    "enabled": true
+  },
+  {
+    "expression": "/*CAM-Rip*/ regexMatched(streams, 'cam')",
+    "score": -2000,
+    "enabled": true
+  },
+  {
+    "expression": "/*AV1*/ regexMatched(streams, 'av1')",
+    "score": -2000,
+    "enabled": true
+  },
+  {
+    "expression": "/*HardSubs*/ regexMatched(streams, 'hardsubs')",
+    "score": -500,
+    "enabled": true
+  },
+  {
+    "expression": "/*HDRip*/ regexMatched(streams, 'hdrip')",
+    "score": -300,
+    "enabled": true
+  },
+  {
+    "expression": "/*DVD*/ regexMatched(streams, 'dvd')",
+    "score": -150,
+    "enabled": true
+  },
+  {
+    "expression": "/*TVRip*/ regexMatched(streams, 'tvrip')",
+    "score": -50,
+    "enabled": true
+  },
+  {
+    "expression": "/*Sample*/ regexMatched(streams, 'sample')",
+    "score": -2000,
+    "enabled": true
+  },
+  {
+    "expression": "/*REPACK*/ regexMatched(streams, 'repack')",
+    "score": 40,
+    "enabled": true
+  },
+  {
+    "expression": "/*🥇Group*/ regexMatched(streams, 'group-t1')",
+    "score": 100,
+    "enabled": true
+  },
+  {
+    "expression": "/*🥈Group*/ regexMatched(streams, 'group-t2')",
+    "score": 80,
+    "enabled": true
+  },
+  {
+    "expression": "/*🥉Group*/ regexMatched(streams, 'group-t3')",
+    "score": 60,
+    "enabled": true
+  },
+  {
+    "expression": "/*🌏Group*/ regexMatched(streams, 'group-intl')",
+    "score": 80,
+    "enabled": true
+  },
+  {
+    "expression": "/*🎌Elite*/ regexMatched(streams, 'anime-top')",
+    "score": 70,
+    "enabled": true
+  },
+  {
+    "expression": "/*🎌Group*/ regexMatched(streams, 'anime-std')",
+    "score": 40,
+    "enabled": true
+  },
+  {
+    "expression": "/*🗑️Group*/ regexMatched(streams, 'group-lq')",
+    "score": -200,
+    "enabled": true
+  },
+  {
+    "expression": "/*🚫SiteRip*/ regexMatched(streams, 'siterips')",
+    "score": -300,
+    "enabled": true
+  },
+  {
+    "expression": "/*♨️Usenet*/ type(streams, 'usenet')",
+    "score": -75,
+    "enabled": true
+  },
+  {
+    "expression": "/*✨HDR*/ visualTag(streams, 'HDR', 'HDR10', 'HDR10+')",
+    "score": 25,
+    "enabled": true
+  },
+  {
+    "expression": "/*✨HLG*/ visualTag(streams, 'HLG')",
+    "score": 15,
+    "enabled": true
+  },
+  {
+    "expression": "/*⬆️Upscale*/ visualTag(streams, 'AI', 'Upscaled')",
+    "score": -50,
+    "enabled": true
+  }
+]
