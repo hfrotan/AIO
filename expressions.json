@@ -223,5 +223,15 @@
     "expression": "/*AVC*/ encode(streams, 'AVC')",
     "score": 10,
     "enabled": true
+  },
+  {
+    "expression": "/*🪫Mini4K*/ isAnime ? size(resolution(streams, '2160p'), 0, '1GB') : queryType == 'movie' ? size(resolution(streams, '2160p'), 0, '6GB') : size(resolution(streams, '2160p'), 0, '2GB')",
+    "score": -250,
+    "enabled": true
+  },
+  {
+    "expression": "/*🪫Mini1080p*/ isAnime ? size(resolution(streams, '1080p'), 0, '200MB') : queryType == 'movie' ? size(resolution(streams, '1080p'), 0, '1500MB') : size(resolution(streams, '1080p'), 0, '300MB')",
+    "score": -100,
+    "enabled": true
   }
 ]
