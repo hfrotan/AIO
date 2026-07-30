@@ -238,5 +238,35 @@
     "expression": "/*720p*/ resolution(streams, '720p')",
     "score": 60,
     "enabled": true
+  },
+  {
+    "expression": "/*Scene*/ regexMatched(streams, 'scene')",
+    "score": 30,
+    "enabled": true
+  },
+  {
+    "expression": "/*🎌BD+*/ regexMatched(streams, 'anime-bd-top')",
+    "score": 50,
+    "enabled": true
+  },
+  {
+    "expression": "/*🎌BD*/ regexMatched(streams, 'anime-bd-mid')",
+    "score": 35,
+    "enabled": true
+  },
+  {
+    "expression": "/*🇫🇷Anime*/ regexMatched(streams, 'fr-anime')",
+    "score": 40,
+    "enabled": true
+  },
+  {
+    "expression": "/*🗑️Anime*/ regexMatched(streams, 'anime-lq')",
+    "score": -150,
+    "enabled": true
+  },
+  {
+    "expression": "/*❓Obfus*/ regexMatched(streams, 'obfuscated')",
+    "score": -100,
+    "enabled": true
   }
 ]
