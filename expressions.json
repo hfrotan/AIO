@@ -96,7 +96,7 @@
   },
   {
     "expression": "/*BluRay*/ regexMatched(streams, 'bluray')",
-    "score": 80,
+    "score": 150,
     "enabled": true
   },
   {
