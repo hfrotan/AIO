@@ -141,32 +141,32 @@
   },
   {
     "expression": "/*🥇Group*/ regexMatched(streams, 'group-t1')",
-    "score": 100,
+    "score": 50,
     "enabled": true
   },
   {
     "expression": "/*🥈Group*/ regexMatched(streams, 'group-t2')",
-    "score": 80,
+    "score": 40,
     "enabled": true
   },
   {
     "expression": "/*🥉Group*/ regexMatched(streams, 'group-t3')",
-    "score": 60,
+    "score": 30,
     "enabled": true
   },
   {
     "expression": "/*🌏Group*/ regexMatched(streams, 'group-intl')",
-    "score": 80,
+    "score": 40,
     "enabled": true
   },
   {
     "expression": "/*🎌Elite*/ regexMatched(streams, 'anime-top')",
-    "score": 70,
+    "score": 35,
     "enabled": true
   },
   {
     "expression": "/*🎌Group*/ regexMatched(streams, 'anime-std')",
-    "score": 40,
+    "score": 20,
     "enabled": true
   },
   {
