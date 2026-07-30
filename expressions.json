@@ -233,5 +233,10 @@
     "expression": "/*🪫Mini1080p*/ isAnime ? size(resolution(streams, '1080p'), 0, '200MB') : queryType == 'movie' ? size(resolution(streams, '1080p'), 0, '1500MB') : size(resolution(streams, '1080p'), 0, '300MB')",
     "score": -100,
     "enabled": true
+  },
+  {
+    "expression": "/*720p*/ resolution(streams, '720p')",
+    "score": 60,
+    "enabled": true
   }
 ]
