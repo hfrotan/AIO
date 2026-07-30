@@ -198,5 +198,30 @@
     "expression": "/*⬆️Upscale*/ visualTag(streams, 'AI', 'Upscaled')",
     "score": -50,
     "enabled": true
+  },
+  {
+    "expression": "/*1080p*/ resolution(streams, '1080p')",
+    "score": 75,
+    "enabled": true
+  },
+  {
+    "expression": "/*4K*/ resolution(streams, '2160p')",
+    "score": 150,
+    "enabled": true
+  },
+  {
+    "expression": "/*1440p*/ resolution(streams, '1440p')",
+    "score": 100,
+    "enabled": true
+  },
+  {
+    "expression": "/*HEVC*/ encode(streams, 'HEVC')",
+    "score": 15,
+    "enabled": true
+  },
+  {
+    "expression": "/*AVC*/ encode(streams, 'AVC')",
+    "score": 10,
+    "enabled": true
   }
 ]
