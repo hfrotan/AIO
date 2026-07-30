@@ -181,7 +181,7 @@
   },
   {
     "expression": "/*♨️Usenet*/ type(streams, 'usenet')",
-    "score": -75,
+    "score": -50,
     "enabled": true
   },
   {
