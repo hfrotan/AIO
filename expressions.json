@@ -201,17 +201,17 @@
   },
   {
     "expression": "/*1080p*/ resolution(streams, '1080p')",
-    "score": 75,
+    "score": 120,
     "enabled": true
   },
   {
     "expression": "/*4K*/ resolution(streams, '2160p')",
-    "score": 150,
+    "score": 240,
     "enabled": true
   },
   {
     "expression": "/*1440p*/ resolution(streams, '1440p')",
-    "score": 100,
+    "score": 180,
     "enabled": true
   },
   {
