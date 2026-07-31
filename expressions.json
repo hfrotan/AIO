@@ -80,22 +80,22 @@
     "enabled": true
   },
   {
-    "expression": "/*WEB-DL*/ regexMatched(streams, 'web-dl')",
+    "expression": "/*WEB-DL*/ quality(streams, 'WEB-DL')",
     "score": 100,
     "enabled": true
   },
   {
-    "expression": "/*WEBRip*/ regexMatched(streams, 'webrip')",
+    "expression": "/*WEBRip*/ quality(streams, 'WEBRip')",
     "score": 40,
     "enabled": true
   },
   {
-    "expression": "/*REMUX*/ regexMatched(streams, 'remux')",
-    "score": 150,
+    "expression": "/*REMUX*/ quality(streams, 'BluRay REMUX')",
+    "score": 250,
     "enabled": true
   },
   {
-    "expression": "/*BluRay*/ regexMatched(streams, 'bluray')",
+    "expression": "/*BluRay*/ quality(streams, 'BluRay')",
     "score": 150,
     "enabled": true
   },
