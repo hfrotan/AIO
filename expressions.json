@@ -268,5 +268,15 @@
     "expression": "/*❓Obfus*/ regexMatched(streams, 'obfuscated')",
     "score": -100,
     "enabled": true
+  },
+  {
+    "expression": "/*💪4K*/ isAnime ? size(resolution(streams, '2160p'), '2GB') : queryType == 'movie' ? size(resolution(streams, '2160p'), '8GB') : size(resolution(streams, '2160p'), '3GB')",
+    "score": 40,
+    "enabled": true
+  },
+  {
+    "expression": "/*💪1080p*/ isAnime ? size(resolution(streams, '1080p'), '1GB') : queryType == 'movie' ? size(resolution(streams, '1080p'), '5GB') : size(resolution(streams, '1080p'), '2GB')",
+    "score": 25,
+    "enabled": true
   }
 ]
