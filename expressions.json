@@ -181,7 +181,7 @@
   },
   {
     "expression": "/*♨️Usenet*/ type(streams, 'usenet')",
-    "score": -50,
+    "score": 0,
     "enabled": true
   },
   {
@@ -277,6 +277,11 @@
   {
     "expression": "/*💪1080p*/ isAnime ? size(resolution(streams, '1080p'), '1GB') : queryType == 'movie' ? size(resolution(streams, '1080p'), '5GB') : size(resolution(streams, '1080p'), '2GB')",
     "score": 40,
+    "enabled": true
+  },
+  {
+    "expression": "/*❔Src*/ negate(merge(regexMatched(streams, 'premium'),regexMatched(streams, 'premium-plus'),regexMatched(streams, 'europe'),regexMatched(streams, 'europe-plus'),regexMatched(streams, 'latam'),regexMatched(streams, 'india'),regexMatched(streams, 'india-plus'),regexMatched(streams, 'asia'),regexMatched(streams, 'asia-plus'),regexMatched(streams, 'mideast'),regexMatched(streams, 'mideast-plus'),regexMatched(streams, 'africa'),regexMatched(streams, 'cable'),regexMatched(streams, 'cable-plus'),regexMatched(streams, 'free'),regexMatched(streams, 'free-plus')), quality(streams, 'WEB-DL'))",
+    "score": 150,
     "enabled": true
   }
 ]
