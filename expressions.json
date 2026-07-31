@@ -5,77 +5,77 @@
     "enabled": true
   },
   {
-    "expression": "/*Premium+*/ regexMatched(streams, 'premium-plus')",
+    "expression": "/*Premium+*/ negate(merge(regexMatched(streams, 'premium')), regexMatched(streams, 'premium-plus'))",
     "score": 300,
     "enabled": true
   },
   {
-    "expression": "/*Europe*/ regexMatched(streams, 'europe')",
+    "expression": "/*Europe*/ negate(merge(regexMatched(streams, 'premium'),regexMatched(streams, 'premium-plus')), regexMatched(streams, 'europe'))",
     "score": 200,
     "enabled": true
   },
   {
-    "expression": "/*Europe+*/ regexMatched(streams, 'europe-plus')",
+    "expression": "/*Europe+*/ negate(merge(regexMatched(streams, 'premium'),regexMatched(streams, 'premium-plus'),regexMatched(streams, 'europe')), regexMatched(streams, 'europe-plus'))",
     "score": 200,
     "enabled": true
   },
   {
-    "expression": "/*LatAm*/ regexMatched(streams, 'latam')",
+    "expression": "/*LatAm*/ negate(merge(regexMatched(streams, 'premium'),regexMatched(streams, 'premium-plus'),regexMatched(streams, 'europe'),regexMatched(streams, 'europe-plus')), regexMatched(streams, 'latam'))",
     "score": 200,
     "enabled": true
   },
   {
-    "expression": "/*India*/ regexMatched(streams, 'india')",
+    "expression": "/*India*/ negate(merge(regexMatched(streams, 'premium'),regexMatched(streams, 'premium-plus'),regexMatched(streams, 'europe'),regexMatched(streams, 'europe-plus'),regexMatched(streams, 'latam')), regexMatched(streams, 'india'))",
     "score": 200,
     "enabled": true
   },
   {
-    "expression": "/*India+*/ regexMatched(streams, 'india-plus')",
+    "expression": "/*India+*/ negate(merge(regexMatched(streams, 'premium'),regexMatched(streams, 'premium-plus'),regexMatched(streams, 'europe'),regexMatched(streams, 'europe-plus'),regexMatched(streams, 'latam'),regexMatched(streams, 'india')), regexMatched(streams, 'india-plus'))",
     "score": 200,
     "enabled": true
   },
   {
-    "expression": "/*Asia*/ regexMatched(streams, 'asia')",
+    "expression": "/*Asia*/ negate(merge(regexMatched(streams, 'premium'),regexMatched(streams, 'premium-plus'),regexMatched(streams, 'europe'),regexMatched(streams, 'europe-plus'),regexMatched(streams, 'latam'),regexMatched(streams, 'india'),regexMatched(streams, 'india-plus')), regexMatched(streams, 'asia'))",
     "score": 200,
     "enabled": true
   },
   {
-    "expression": "/*Asia+*/ regexMatched(streams, 'asia-plus')",
+    "expression": "/*Asia+*/ negate(merge(regexMatched(streams, 'premium'),regexMatched(streams, 'premium-plus'),regexMatched(streams, 'europe'),regexMatched(streams, 'europe-plus'),regexMatched(streams, 'latam'),regexMatched(streams, 'india'),regexMatched(streams, 'india-plus'),regexMatched(streams, 'asia')), regexMatched(streams, 'asia-plus'))",
     "score": 200,
     "enabled": true
   },
   {
-    "expression": "/*Mideast*/ regexMatched(streams, 'mideast')",
+    "expression": "/*Mideast*/ negate(merge(regexMatched(streams, 'premium'),regexMatched(streams, 'premium-plus'),regexMatched(streams, 'europe'),regexMatched(streams, 'europe-plus'),regexMatched(streams, 'latam'),regexMatched(streams, 'india'),regexMatched(streams, 'india-plus'),regexMatched(streams, 'asia'),regexMatched(streams, 'asia-plus')), regexMatched(streams, 'mideast'))",
     "score": 200,
     "enabled": true
   },
   {
-    "expression": "/*Mideast+*/ regexMatched(streams, 'mideast-plus')",
+    "expression": "/*Mideast+*/ negate(merge(regexMatched(streams, 'premium'),regexMatched(streams, 'premium-plus'),regexMatched(streams, 'europe'),regexMatched(streams, 'europe-plus'),regexMatched(streams, 'latam'),regexMatched(streams, 'india'),regexMatched(streams, 'india-plus'),regexMatched(streams, 'asia'),regexMatched(streams, 'asia-plus'),regexMatched(streams, 'mideast')), regexMatched(streams, 'mideast-plus'))",
     "score": 200,
     "enabled": true
   },
   {
-    "expression": "/*Africa*/ regexMatched(streams, 'africa')",
+    "expression": "/*Africa*/ negate(merge(regexMatched(streams, 'premium'),regexMatched(streams, 'premium-plus'),regexMatched(streams, 'europe'),regexMatched(streams, 'europe-plus'),regexMatched(streams, 'latam'),regexMatched(streams, 'india'),regexMatched(streams, 'india-plus'),regexMatched(streams, 'asia'),regexMatched(streams, 'asia-plus'),regexMatched(streams, 'mideast'),regexMatched(streams, 'mideast-plus')), regexMatched(streams, 'africa'))",
     "score": 200,
     "enabled": true
   },
   {
-    "expression": "/*Cable*/ regexMatched(streams, 'cable')",
+    "expression": "/*Cable*/ negate(merge(regexMatched(streams, 'premium'),regexMatched(streams, 'premium-plus'),regexMatched(streams, 'europe'),regexMatched(streams, 'europe-plus'),regexMatched(streams, 'latam'),regexMatched(streams, 'india'),regexMatched(streams, 'india-plus'),regexMatched(streams, 'asia'),regexMatched(streams, 'asia-plus'),regexMatched(streams, 'mideast'),regexMatched(streams, 'mideast-plus'),regexMatched(streams, 'africa')), regexMatched(streams, 'cable'))",
     "score": 100,
     "enabled": true
   },
   {
-    "expression": "/*Cable+*/ regexMatched(streams, 'cable-plus')",
+    "expression": "/*Cable+*/ negate(merge(regexMatched(streams, 'premium'),regexMatched(streams, 'premium-plus'),regexMatched(streams, 'europe'),regexMatched(streams, 'europe-plus'),regexMatched(streams, 'latam'),regexMatched(streams, 'india'),regexMatched(streams, 'india-plus'),regexMatched(streams, 'asia'),regexMatched(streams, 'asia-plus'),regexMatched(streams, 'mideast'),regexMatched(streams, 'mideast-plus'),regexMatched(streams, 'africa'),regexMatched(streams, 'cable')), regexMatched(streams, 'cable-plus'))",
     "score": 100,
     "enabled": true
   },
   {
-    "expression": "/*Free*/ regexMatched(streams, 'free')",
+    "expression": "/*Free*/ negate(merge(regexMatched(streams, 'premium'),regexMatched(streams, 'premium-plus'),regexMatched(streams, 'europe'),regexMatched(streams, 'europe-plus'),regexMatched(streams, 'latam'),regexMatched(streams, 'india'),regexMatched(streams, 'india-plus'),regexMatched(streams, 'asia'),regexMatched(streams, 'asia-plus'),regexMatched(streams, 'mideast'),regexMatched(streams, 'mideast-plus'),regexMatched(streams, 'africa'),regexMatched(streams, 'cable'),regexMatched(streams, 'cable-plus')), regexMatched(streams, 'free'))",
     "score": 50,
     "enabled": true
   },
   {
-    "expression": "/*Free+*/ regexMatched(streams, 'free-plus')",
+    "expression": "/*Free+*/ negate(merge(regexMatched(streams, 'premium'),regexMatched(streams, 'premium-plus'),regexMatched(streams, 'europe'),regexMatched(streams, 'europe-plus'),regexMatched(streams, 'latam'),regexMatched(streams, 'india'),regexMatched(streams, 'india-plus'),regexMatched(streams, 'asia'),regexMatched(streams, 'asia-plus'),regexMatched(streams, 'mideast'),regexMatched(streams, 'mideast-plus'),regexMatched(streams, 'africa'),regexMatched(streams, 'cable'),regexMatched(streams, 'cable-plus'),regexMatched(streams, 'free')), regexMatched(streams, 'free-plus'))",
     "score": 50,
     "enabled": true
   },
