@@ -115,17 +115,17 @@
     "enabled": true
   },
   {
-    "expression": "/*HDRip*/ regexMatched(streams, 'hdrip')",
+    "expression": "/*HDRip*/ quality(streams, 'HDRip', 'HC HD-Rip')",
     "score": -300,
     "enabled": true
   },
   {
-    "expression": "/*DVD*/ regexMatched(streams, 'dvd')",
+    "expression": "/*DVD*/ quality(streams, 'DVDRip', 'DVD')",
     "score": -150,
     "enabled": true
   },
   {
-    "expression": "/*TVRip*/ regexMatched(streams, 'tvrip')",
+    "expression": "/*TVRip*/ quality(streams, 'HDTV', 'PDTV', 'SDTV')",
     "score": -50,
     "enabled": true
   },
