@@ -201,17 +201,17 @@
   },
   {
     "expression": "/*1080p*/ resolution(streams, '1080p')",
-    "score": 120,
+    "score": 180,
     "enabled": true
   },
   {
     "expression": "/*4K*/ resolution(streams, '2160p')",
-    "score": 240,
+    "score": 150,
     "enabled": true
   },
   {
     "expression": "/*1440p*/ resolution(streams, '1440p')",
-    "score": 180,
+    "score": 120,
     "enabled": true
   },
   {
@@ -271,12 +271,12 @@
   },
   {
     "expression": "/*💪4K*/ isAnime ? size(resolution(streams, '2160p'), '2GB') : queryType == 'movie' ? size(resolution(streams, '2160p'), '8GB') : size(resolution(streams, '2160p'), '3GB')",
-    "score": 40,
+    "score": 25,
     "enabled": true
   },
   {
     "expression": "/*💪1080p*/ isAnime ? size(resolution(streams, '1080p'), '1GB') : queryType == 'movie' ? size(resolution(streams, '1080p'), '5GB') : size(resolution(streams, '1080p'), '2GB')",
-    "score": 25,
+    "score": 40,
     "enabled": true
   }
 ]
