@@ -91,12 +91,12 @@
   },
   {
     "expression": "/*REMUX*/ quality(streams, 'BluRay REMUX')",
-    "score": 250,
+    "score": 350,
     "enabled": true
   },
   {
     "expression": "/*BluRay*/ quality(streams, 'BluRay')",
-    "score": 150,
+    "score": 250,
     "enabled": true
   },
   {
@@ -280,7 +280,7 @@
     "enabled": true
   },
   {
-    "expression": "/*❔Src*/ negate(merge(regexMatched(streams, 'premium'),regexMatched(streams, 'premium-plus'),regexMatched(streams, 'europe'),regexMatched(streams, 'europe-plus'),regexMatched(streams, 'latam'),regexMatched(streams, 'india'),regexMatched(streams, 'india-plus'),regexMatched(streams, 'asia'),regexMatched(streams, 'asia-plus'),regexMatched(streams, 'mideast'),regexMatched(streams, 'mideast-plus'),regexMatched(streams, 'africa'),regexMatched(streams, 'cable'),regexMatched(streams, 'cable-plus'),regexMatched(streams, 'free'),regexMatched(streams, 'free-plus')), quality(streams, 'WEB-DL'))",
+    "expression": "/*❔Src*/ negate(merge(regexMatched(streams, 'premium'),regexMatched(streams, 'premium-plus'),regexMatched(streams, 'europe'),regexMatched(streams, 'europe-plus'),regexMatched(streams, 'latam'),regexMatched(streams, 'india'),regexMatched(streams, 'india-plus'),regexMatched(streams, 'asia'),regexMatched(streams, 'asia-plus'),regexMatched(streams, 'mideast'),regexMatched(streams, 'mideast-plus'),regexMatched(streams, 'africa'),regexMatched(streams, 'cable'),regexMatched(streams, 'cable-plus'),regexMatched(streams, 'free'),regexMatched(streams, 'free-plus')), quality(streams, 'WEB-DL', 'WEBRip'))",
     "score": 150,
     "enabled": true
   }
