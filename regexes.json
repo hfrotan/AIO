@@ -80,26 +80,6 @@
     "score": 0
   },
   {
-    "name": "web-dl",
-    "pattern": "^(?!.*(?:[Bb][Ll][Uu][-._ ]?[Rr][Aa][Yy]|[Bb][Dd][Rr][Ii][Pp]|[Bb][Rr][Rr][Ii][Pp]|[Rr][Ee][Mm][Uu][Xx])).*?(?<![A-Za-z0-9])[Ww][Ee][Bb][-._ ]?[Dd][Ll](?![A-Za-z0-9])",
-    "score": 0
-  },
-  {
-    "name": "webrip",
-    "pattern": "^(?!.*(?:[Bb][Ll][Uu][-._ ]?[Rr][Aa][Yy]|[Bb][Dd][Rr][Ii][Pp]|[Bb][Rr][Rr][Ii][Pp]|[Rr][Ee][Mm][Uu][Xx])).*?(?<![A-Za-z0-9])[Ww][Ee][Bb][-._ ]?[Rr][Ii][Pp](?![A-Za-z0-9])",
-    "score": 0
-  },
-  {
-    "name": "remux",
-    "pattern": "(?<![A-Za-z0-9])([Rr][Ee][Mm][Uu][Xx])(?![A-Za-z0-9])",
-    "score": 0
-  },
-  {
-    "name": "bluray",
-    "pattern": "(?<![A-Za-z0-9])([Bb][Ll][Uu][-._ ]?[Rr][Aa][Yy]|[Bb][Dd][Rr][Ee][Mm][Uu][Xx]|[Bb][Dd]25|[Bb][Dd]50)(?![A-Za-z0-9])",
-    "score": 0
-  },
-  {
     "name": "cam",
     "pattern": "(?<![A-Za-z0-9])(CAM|[Hh][Dd][Cc][Aa][Mm]|[Hh][Qq][Cc][Aa][Mm]|CAM[Rr][Ii][Pp]|TS|[Hh][Dd][Tt][Ss]|[Tt][Ee][Ll][Ee][Ss][Yy][Nn][Cc]|[Tt][Ss][Rr][Ii][Pp]|TC|[Hh][Dd][Tt][Cc]|[Tt][Ee][Ll][Ee][Cc][Ii][Nn][Ee]|SCR|[Ss][Cc][Rr][Ee][Ee][Nn][Ee][Rr]|[Dd][Vv][Dd][Ss][Cc][Rr]|[Dd][Vv][Dd][Ss][Cc][Rr][Ee][Ee][Nn][Ee][Rr]|[Ww][Oo][Rr][Kk][Pp][Rr][Ii][Nn][Tt]|WP)(?![A-Za-z0-9])",
     "score": 0
@@ -112,21 +92,6 @@
   {
     "name": "hardsubs",
     "pattern": "(?<![A-Za-z0-9])(HC|[Kk][Oo][Rr][Ss][Uu][Bb]|[Hh][Aa][Rr][Dd][Ss][Uu][Bb][Ss]?)(?![A-Za-z0-9])",
-    "score": 0
-  },
-  {
-    "name": "hdrip",
-    "pattern": "(?<![A-Za-z0-9])[Hh][Dd][Rr][Ii][Pp](?![A-Za-z0-9])",
-    "score": 0
-  },
-  {
-    "name": "dvd",
-    "pattern": "(?<![A-Za-z0-9])(DVD[Rr][Ii][Pp]|[Dd][Vv][Dd][Rr]|[Xx][Vv][Ii][Dd]|[Dd][Ii][Vv][Xx])(?![A-Za-z0-9])",
-    "score": 0
-  },
-  {
-    "name": "tvrip",
-    "pattern": "(?<![A-Za-z0-9])([Hh][Dd][Tt][Vv]|[Pp][Dd][Tt][Vv]|[Ss][Dd][Tt][Vv]|[Tt][Vv][Rr][Ii][Pp]|[Ss][Aa][Tt][Rr][Ii][Pp]|DSR)(?![A-Za-z0-9])",
     "score": 0
   },
   {
