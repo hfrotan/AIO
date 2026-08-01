@@ -1,177 +1,292 @@
 [
   {
-    "name": "premium",
-    "pattern": "^(?!.*(?:[Bb][Ll][Uu][-._ ]?[Rr][Aa][Yy]|[Bb][Dd][Rr][Ii][Pp]|[Bb][Rr][Rr][Ii][Pp]|[Rr][Ee][Mm][Uu][Xx])).*?(?<![A-Za-z0-9])([Aa][Cc][Rr][Nn]|[Aa][Mm][Aa][Zz][Oo][Nn]|[Aa][Mm][Aa][Zz][Oo][Nn][Hh][Dd]|[Aa][Mm][Cc][Pp]|[Aa][Mm][Zz][Nn]|[Aa][Pp][Pp][Ll][Ee][Tt][Vv]|[Aa][Pp][Tt][Vv]|[Aa][Tt][Vv][Pp]|[Bb][Cc][Oo][Rr][Ee]|[Bb][Rr][Ii][Tt]|[Cc][Rr][Aa][Vv]|[Cc][Rr][Aa][Vv][Ee]|[Cc][Rr][Uu][Nn][Cc][Hh][Yy][Rr][Oo][Ll][Ll]|[Dd][Ii][Ss][Nn][Ee][Yy][Pp][Ll][Uu][Ss]|[Dd][Ss][Cc][Pp]|[Dd][Ss][Nn][Pp]|[Dd][Ss][Nn][Pp][Hh][Ss]|[Dd][Ss][Nn][Yy]|[Ee][Pp][Ii][Xx]|[Hh][Bb][Oo]|[Hh][Bb][Oo][Mm]|[Hh][Bb][Oo][Mm][Aa][Xx]|[Hh][Mm][Aa][Xx]|[Hh][Uu][Ll][Uu]|[Ii][Tt][Uu][Nn][Ee][Ss]|[Mm][Gg][Mm]\\+|[Mm][Uu][Bb][Ii]|[Nn][Ee][Tt][Ff][Ll][Ii][Xx]|[Nn][Ee][Tt][Ff][Ll][Ii][Xx][Hh][Dd]|[Nn][Ee][Tt][Ff][Ll][Ii][Xx][Uu][Hh][Dd]|NF|[Nn][Ff][Ll][Xx]|[Pp][Aa][Rr][Aa]|[Pp][Cc][Oo][Kk]|[Pp][Ee][Aa][Cc][Oo][Cc][Kk]|[Pp][Mm][Tt][Pp]|[Pp][Mm][Tt][Vv]|[Ss][Hh][Dd][Rr]|[Ss][Hh][Oo][Ww][Tt][Ii][Mm][Ee]|[Ss][Hh][Uu][Dd][Dd][Ee][Rr]|[Ss][Tt][Aa][Rr][Zz]|[Ss][Tt][Zz]|[Aa][Pp][Pp][Ll][Ee] [Tt][Vv]\\+|[Dd][Ii][Ss][Nn][Ee][Yy]\\+|[Pp][Aa][Rr][Aa][Mm][Oo][Uu][Nn][Tt]\\+|[Pp][Aa][Rr][Aa][Mm][Oo][Uu][Nn][Tt] [Pp][Ll][Uu][Ss]|[Pp][Ee][Aa][Cc][Oo][Cc][Kk] [Tt][Vv]|[Yy][Oo][Uu][Tt][Uu][Bb][Ee] [Rr][Ee][Dd]|[Dd][Cc] [Uu][Nn][Ii][Vv][Ee][Rr][Ss][Ee]|[Ff][Uu][Nn][Ii][Mm][Aa][Tt][Ii][Oo][Nn]|[Dd][Ss][Cc][Vv]\\+|DCP|[Ss][Hh][Oo][Ww][Tt][Ii][Mm][Ee]|[Ss][Tt][Aa][Rr][Zz][Pp][Ll][Aa][Yy])(?![A-Za-z0-9])",
-    "score": 0
+    "expression": "/*Premium*/ regexMatched(streams, 'premium')",
+    "score": 300,
+    "enabled": true
   },
   {
-    "name": "premium-plus",
-    "pattern": "(?<![A-Za-z0-9])((?<![[Hh][Hh]][[Dd][Dd]][.\\-_\\[Ss]])[Mm][Aa]|[Aa][Mm][Cc]|[Aa][Tt][Vv]|CR|FX|[Ff][Xx][Xx]|[Hh][Uu][Ll]|iP|iT|MAX|[Mm][Tt][Vv]|NOW|PLAY|RED|[Ss][Hh][Oo])(?=[.\\-_\\s][Ww][Ee][Bb](?:[-.]?(?:[Dd][Ll]|Rip|RIP))?(?![A-Za-z0-9]))",
-    "score": 0
+    "expression": "/*Premium+*/ negate(merge(regexMatched(streams, 'premium')), regexMatched(streams, 'premium-plus'))",
+    "score": 300,
+    "enabled": true
   },
   {
-    "name": "europe",
-    "pattern": "^(?!.*(?:[Bb][Ll][Uu][-._ ]?[Rr][Aa][Yy]|[Bb][Dd][Rr][Ii][Pp]|[Bb][Rr][Rr][Ii][Pp]|[Rr][Ee][Mm][Uu][Xx])).*?(?<![A-Za-z0-9])(10[Pp][Ll][Aa][Yy]|4OD|7[Pp][Ll][Uu][Ss]|9[Nn][Oo][Ww]|[Aa][Ll][Ll]4|[Aa][Nn][Tt][Ee][Nn][Aa]|[Aa][Rr][Dd]|[Aa][Rr][Tt][Ee]|[Aa][Tt][Rr][Ee][Ss][Pp][Ll][Aa][Yy][Ee][Rr]|[Aa][Tt][Rr][Pp]|[Aa][Uu][Bb][Cc]|[Aa][Uu][Vv][Ii][Oo]|[Bb][Bb][Cc]|[Bb][Ii][Nn][Gg][Ee]|[Cc][Aa][Nn][Aa][Ll][Pp][Ll]|[Cc][Aa][Nn][Aa][Ll][Pp][Ll][Uu][Ss]|[Cc][Bb][Cc]|CH4|[Cc][Mm][Oo][Rr][Ee]|[Cc][Tt][Vv]|[Dd][Pp][Ll][Yy]|[Dd][Rr][Tt][Vv]|E4|[Ff][Ii][Ll][Mm][Ii][Nn]|[Ff][Ll][Ii][Xx][Oo][Ll][Ee]|[Ff][Oo][Xx][Tt][Ee][Ll]|[Ff][Rr][Aa][Nn][Cc][Ee][Tt][Vv]|[Ff][Tt][Vv]|[Gg][Oo][Pp][Ll][Aa][Yy]|[Hh][Aa][Yy][Uu]|[Hh][Bb][Oo][Gg][Oo]|[Ii][Pp][Ll][Aa][Yy][Ee][Rr]|[Ii][Tt][Vv][Xx]|[Jj][Oo][Jj]|[Jj][Oo][Yy][Nn]|[Mm][Aa][Gg][Ee][Nn][Tt][Aa]|[Mm][Ee][Dd][Ii][Aa][Ss][Ee][Tt]|[Mm][Oo][Ll][Oo][Tt][Oo][Vv]|[Mm][Oo][Vv][Ii]|[Mm][Oo][Vv][Ii][Ss][Tt][Aa][Rr]|[Mm][Ss][Ee][Tt]|[Mm][Tt][Vv]3|MY5|[Mm][Yy][Cc][Aa][Nn][Aa][Ll]|[Nn][Ee][Nn][Tt]|[Nn][Ll][Zz]|[Nn][Ll][Zz][Ii][Ee][Tt]|[Nn][Pp][Oo]|[Nn][Rr][Kk]|[Oo]2[Tt][Vv]|[Oo][Cc][Ss]|[Oo][Rr][Ff]|[Pp][Aa][Tt][Hh][Ee]|[Pp][Ll][Aa][Yy][Ee][Rr][Pp][Ll]|[Rr][Aa][Ii][Pp][Ll][Aa][Yy]|[Rr][Aa][Kk][Uu][Tt][Ee][Nn]|[Rr][Kk][Tt][Nn]|[Rr][Tt][Bb][Ff]|[Rr][Tt][Ee]|[Rr][Tt][Ll][Pp]|[Rr][Tt][Ll][Zz]|[Rr][Tt][Vv][Ee]|[Ss][Aa][Ll][Tt][Oo]|[Ss][Kk][Ss][Tt]|[Ss][Kk][Yy][Ss][Hh][Oo][Ww][Tt][Ii][Mm][Ee]|[Ss][Rr][Ff]|[Ss][Ss][Tt]|[Ss][Tt][Rr][Ee][Aa][Mm][Zz]|[Ss][Vv][Tt]|[Ss][Vv][Tt][Pp][Ll][Aa][Yy]|TG4|[Tt][Ii][Mm][Vv]|[Tt][Ii][Mm][Vv][Ii][Ss][Ii][Oo][Nn]|TV2|TV4|[Tt][Vv][Nn][Zz]|[Tt][Vv][Pp]|[Uu][Kk][Tt][Vv]|V[Dd][Ll]|[Vv][Ii][Aa][Pp]|[Vv][Ii][Aa][Pp][Ll][Aa][Yy]|[Vv][Ii][Dd][Ee][Oo][Ll][Aa][Nn][Dd]|[Vv][Oo][Yy][Oo]|[Vv][Tt][Mm]|[Ww][Oo][Ww][Tt][Vv]|[Yy][Ll][Ee]|[Zz][Dd][Ff]|[Ss][Kk][Yy][Uu][Kk]|[Nn][Oo][Ww][Tt][Vv]|[Rr][Uu][Uu][Tt][Uu]|[Kk][Aa][Tt][Ss][Oo][Mm][Oo]|[Tt][Ee][Ll][Ii][Aa]|[Aa][Ll][Ll][Ee][Nn][Tt][Ee]|[Nn][Ee][Oo][Nn]|[Tt][Hh][Rr][Ee][Ee][Nn][Oo][Ww]|[Ss][Kk][Yy][Nn][Zz]|[Tt][Oo][Uu][Tt][Vv]|[Nn][Oo][Oo][Vv][Oo]|[Ii][Ll][Ll][Ii][Cc][Oo]|[Ss][Ee][Rr][Vv][Uu][Ss][Tt][Vv]|[Pp][Uu][Ll][Ss]4|[Cc][Hh][Ii][Ll][Ii]|[Ii][Nn][Ff][Ii][Nn][Ii][Tt][Yy]|[Tt][Ii][Mm][Vv][Ii][Ss]|[Cc][Aa][Nn][Aa][Ll][Pp][Ll][Aa][Yy]|[Rr][Tt][Ll][Pp][Ll][Uu][Ss]|[Ww][Oo][Ww][Pp][Ll][Uu][Ss]|[Dd][Ii][Ss][Cc][Oo][Vv][Ee][Rr][Yy][Pp][Ll][Uu][Ss]|[Ss][Kk][Yy][Gg][Oo])(?![A-Za-z0-9])",
-    "score": 0
+    "expression": "/*Europe*/ negate(merge(regexMatched(streams, 'premium'),regexMatched(streams, 'premium-plus')), regexMatched(streams, 'europe'))",
+    "score": 200,
+    "enabled": true
   },
   {
-    "name": "europe-plus",
-    "pattern": "(?<![A-Za-z0-9])([Cc][Nn][Ll][Pp]|NOVA|PRIMA|[Ss][Tt][Aa][Nn]|[Vv][Ii][Rr][Gg][Ii][Nn])(?=[.\\-_\\s][Ww][Ee][Bb](?:[-.]?(?:[Dd][Ll]|Rip|RIP))?(?![A-Za-z0-9]))",
-    "score": 0
+    "expression": "/*Europe+*/ negate(merge(regexMatched(streams, 'premium'),regexMatched(streams, 'premium-plus'),regexMatched(streams, 'europe')), regexMatched(streams, 'europe-plus'))",
+    "score": 200,
+    "enabled": true
   },
   {
-    "name": "latam",
-    "pattern": "^(?!.*(?:[Bb][Ll][Uu][-._ ]?[Rr][Aa][Yy]|[Bb][Dd][Rr][Ii][Pp]|[Bb][Rr][Rr][Ii][Pp]|[Rr][Ee][Mm][Uu][Xx])).*?(?<![A-Za-z0-9])([Bb][Ll][Ii][Mm]|[Cc][Ll][Aa][Rr][Oo]|[Gg][Ll][Bb][Pp]|[Gg][Ll][Oo][Bb][Oo][Pp][Ll][Aa][Yy]|[Pp][Aa][Nn][Tt][Aa][Yy][Aa]|[Ss][Tt][Aa][Rr][Pp]|[Ss][Tt][Rr][Pp]|[Vv][Ii][Xx][Pp]|DGO|[Dd][Ii][Rr][Ee][Cc][Tt][Vv][Gg][Oo]|[Vv][Ii][Vv][Oo][Pp][Ll][Aa][Yy]|[Ss][Tt][Aa][Rr][Pp][Ll][Uu][Ss]|[Pp][Aa][Rr][Aa][Mm][Oo][Uu][Nn][Tt][Ll][Aa]|[Cc][Ii][Nn][Ee][Pp][Oo][Ll][Ii][Ss])(?![A-Za-z0-9])",
-    "score": 0
+    "expression": "/*LatAm*/ negate(merge(regexMatched(streams, 'premium'),regexMatched(streams, 'premium-plus'),regexMatched(streams, 'europe'),regexMatched(streams, 'europe-plus')), regexMatched(streams, 'latam'))",
+    "score": 200,
+    "enabled": true
   },
   {
-    "name": "india",
-    "pattern": "^(?!.*(?:[Bb][Ll][Uu][-._ ]?[Rr][Aa][Yy]|[Bb][Dd][Rr][Ii][Pp]|[Bb][Rr][Rr][Ii][Pp]|[Rr][Ee][Mm][Uu][Xx])).*?(?<![A-Za-z0-9])([Aa][Aa][Oo][Nn][Xx][Tt]|[Aa][Dd][Dd][Aa]|[Aa][Dd][Dd][Aa][Tt][Ii][Mm][Ee][Ss]|[Aa][Ii][Rr][Tt][Ee][Ll][Xx][Ss][Tt][Rr][Ee][Aa][Mm]|[Aa][Ll][Tt][Bb][Aa][Ll][Aa][Jj][Ii]|[Aa][Tt][Rr][Aa][Nn][Gg][Ii][Ii]|[Cc][Hh][Aa][Uu][Pp][Aa][Ll]|[Cc][Ii][Nn][Ee][Pp][Rr][Ii][Mm][Ee]|[Dd][Ii][Ss][Nn][Ee][Yy][Pp][Ll][Uu][Ss][Hh][Oo][Tt][Ss][Tt][Aa][Rr]|[Dd][Oo][Cc][Uu][Bb][Aa][Yy]|[Ee][Pp][Ii][Cc][Oo][Nn]|[Ee][Rr][Oo][Ss][Nn][Oo][Ww]|[Ee][Rr][Ss][Nn]|[Ee][Tt][Vv][Ww][Ii][Nn]|[Ff][Aa][Nn][Cc][Oo][Dd][Ee]|[Hh][Nn][Gg][Mm]|[Hh][Oo][Ii][Cc][Hh][Oo][Ii]|[Hh][Oo][Tt][Ss][Tt][Aa][Rr]|[Hh][Tt][Ss][Rr]|[Hh][Uu][Nn][Gg][Aa][Mm][Aa]|[Jj][Ii][Oo][Cc][Ii][Nn][Ee][Mm][Aa]|[Jj][Ii][Oo][Hh][Oo][Tt][Ss][Tt][Aa][Rr]|[Jj][Ii][Oo][Hh][Ss]|[Jj][Ii][Oo][Ss][Tt][Aa][Rr]|[Kk][Ll][Ii][Kk][Kk]|[Kk][Oo][Oo][Dd][Ee]|[Ll][Gg][Pp]|[Ll][Ii][Oo][Nn][Ss][Gg][Aa][Tt][Ee][Pp][Ll][Aa][Yy]|[Mm][Aa][Nn][Oo][Rr][Aa][Mm][Aa][Mm][Aa][Xx]|[Mm][Xx][Pp][Ll][Aa][Yy][Ee][Rr]|[Nn][Ee][Ee][Ss][Tt][Rr][Ee][Aa][Mm]|[Pp][Ll][Aa][Nn][Ee][Tt][Mm][Aa][Rr][Aa][Tt][Hh][Ii]|[Pp][Ll][Nn][Xx][Tt]|[Pp][Rr][Ii][Mm][Ee][Ss][Hh][Oo][Tt][Ss]|[Ss][Hh][Ee][Mm][Aa][Rr][Oo][Oo][Mm][Ee]|[Ss][Hh][Mm][Rr]|[Ss][Ii][Mm][Pp][Ll][Yy][Ss][Oo][Uu][Tt][Hh]|[Ss][Ll][Ii][Vv]|[Ss][Oo][Nn][Yy][Ll][Ii][Vv]|[Ss][Uu][Nn][Nn][Xx][Tt]|[Tt][Aa][Tt][Aa][Pp][Ll][Aa][Yy]|[Tt][Ee][Nn][Tt][Kk][Oo][Tt][Tt][Aa]|[Uu][Ll][Ll][Uu]|[Uu][Nn][Xx][Tt]|[Vv][Oo][Oo][Tt]|[Yy][Uu][Pp][Pp][Tt][Vv]|[Zz][Ee][Ee]5|[Zz][Ee][Ee][Pp][Ll][Ee][Xx]|[Jj][Ii][Oo][Ss][Tt][Uu][Dd][Ii][Oo][Ss]|[Aa][Mm][Aa][Zz][Oo][Nn][Mm][Xx]|[Mm][Xx][Pp][Ll][Aa][Yy][Ee][Rr][Pp][Ll][Uu][Ss]|[Dd][Ii][Ss][Cc][Oo][Vv][Ee][Rr][Yy][Pp][Ll][Uu][Ss][Ii][Nn]|[Vv][Rr][Oo][Tt][Tt]|[Oo][Hh][Oo][Gg][Uu][Jj][Aa][Rr][Aa][Tt][Ii]|[Rr][Aa][Jj][Ss][Hh][Rr][Ii]|[Aa][Aa][Ss][Tt][Hh][Aa]|[Nn][Aa][Mm][Mm][Aa][Ff][Ll][Ii][Xx]|[Tt][Aa][Rr][Aa][Nn][Gg]|[Mm][Uu][Bb][Ii][Ii][Nn])(?![A-Za-z0-9])",
-    "score": 0
+    "expression": "/*India*/ negate(merge(regexMatched(streams, 'premium'),regexMatched(streams, 'premium-plus'),regexMatched(streams, 'europe'),regexMatched(streams, 'europe-plus'),regexMatched(streams, 'latam')), regexMatched(streams, 'india'))",
+    "score": 200,
+    "enabled": true
   },
   {
-    "name": "india-plus",
-    "pattern": "(?<![A-Za-z0-9])([Aa][Hh][Aa]|HS|[Ss][Aa][Ii][Nn][Aa]|STAGE)(?=[.\\-_\\s][Ww][Ee][Bb](?:[-.]?(?:[Dd][Ll]|Rip|RIP))?(?![A-Za-z0-9]))",
-    "score": 0
+    "expression": "/*India+*/ negate(merge(regexMatched(streams, 'premium'),regexMatched(streams, 'premium-plus'),regexMatched(streams, 'europe'),regexMatched(streams, 'europe-plus'),regexMatched(streams, 'latam'),regexMatched(streams, 'india')), regexMatched(streams, 'india-plus'))",
+    "score": 200,
+    "enabled": true
   },
   {
-    "name": "asia",
-    "pattern": "^(?!.*(?:[Bb][Ll][Uu][-._ ]?[Rr][Aa][Yy]|[Bb][Dd][Rr][Ii][Pp]|[Bb][Rr][Rr][Ii][Pp]|[Rr][Ee][Mm][Uu][Xx])).*?(?<![A-Za-z0-9])([Aa][Bb][Ee][Mm][Aa]|[Aa][Bb][Ee][Mm][Aa][Tt][Vv]|[Aa][Dd][Nn]|[Aa][Ii][Ss][Pp][Ll][Aa][Yy]|[Aa][Nn][Ii][Pp][Ll][Uu][Ss]|[Aa][Nn][Ll][Bb]|[Bb]-[Gg][Ll][Oo][Bb][Aa][Ll]|[Bb][Gg][Ll][Oo][Bb][Aa][Ll]|[Bb][Ii][Ll][Ii]|[Bb][Ii][Ll][Ii][Bb][Ii][Ll][Ii]|[Cc][Aa][Tt][Cc][Hh][Pp][Ll][Aa][Yy]|[Cc][Oo][Uu][Pp][Aa][Nn][Gg]|[Cc][Pp][Nn][Gg]|[Dd][Aa][Nn][Ii][Mm][Ee]|[Dd][Mm][Mm]-[Tt][Vv]|[Dd][Mm][Mm][Tt][Vv]|[Ff][Oo][Dd]|[Ff][Uu][Nn][Ii]|[Hh][Aa][Mm][Ii]|[Hh][Aa][Mm][Ii][Vv][Ii][Dd][Ee][Oo]|[Hh][Ii][Dd][Ii]|[Hh][Ii][Dd][Ii][Vv][Ee]|[Ii][Ff][Ll][Ii][Xx]|[Ii][Qq][Ii][Yy][Ii]|[Ii][Ww][Aa][Nn][Tt]|[Ii][Ww][Aa][Nn][Tt][Tt][Ff][Cc]|[Kk][Cc][Ww]|[Kk][Kk][Tt][Vv]|[Kk][Oo][Cc][Oo][Ww][Aa]|[Ll][Aa][Ff][Tt][Ee][Ll]|[Ll][Ee][Mm][Ii][Nn][Oo]|[Ll][Ii][Nn][Ee][Tt][Vv]|[Mm][Ee][Ww][Aa][Tt][Cc][Hh]|[Mm][Gg][Tt][Vv]|[Mm][Oo][Ll][Aa]|[Mm][Oo][Nn][Oo][Mm][Aa][Xx]|[Mm][Yy][Tt][Vv][Ss][Uu][Pp][Ee][Rr]|[Pp][Aa][Rr][Aa][Vv][Ii]|[Tt][Rr][Uu][Ee][Ii][Dd]|[Tt][Vv][Ee][Rr]|[Tt][Vv][Ii][Nn][Gg]|[Tt][Vv][Nn]|[Uu]-[Nn][Ee][Xx][Tt]|[Uu][Nn][Ee][Xx][Tt]|[Vv][Ii][Dd][Ii][Oo]|[Vv][Ii][Kk][Ii]|[Vv][Ii][Vv][Aa][Mm][Aa][Xx]|[Vv][Rr][Vv]|[Ww][Aa][Kk][Aa][Nn][Ii][Mm]|[Ww][Aa][Tt][Cc][Hh][Aa]|[Ww][Aa][Vv][Vv][Ee]|[Ww][Ee][Tt][Vv]|[Ww][Kk][Nn]|[Yy][Oo][Uu][Kk][Uu]|[Ww][Oo][Ww][Oo][Ww]|[Mm][Ii][Gg][Uu]|[Cc][Cc][Tt][Vv]|[Ss][Ee][Ee][Zz][Nn]|[Vv][Ii][Uu][Tt][Vv]|[Nn][Oo][Ww][Tt][Vv][Hh][Kk]|[Ii][Ww][Aa][Nn][Tt][Aa]|[Gg][Aa][Gg][Aa][Oo][Oo][Ll][Aa][Ll][Aa]|[Oo][Tt][Tt][Kk][Rr]|AIS|[Pp][Rr][Ii][Mm][Ee][Vv][Ii][Dd][Ee][Oo][Jj][Pp]|[Ll][Ee][Mm][Ii][Nn][Oo]|[Hh][Uu][Ll][Uu][Jj][Pp]|DMM)(?![A-Za-z0-9])",
-    "score": 0
+    "expression": "/*Asia*/ negate(merge(regexMatched(streams, 'premium'),regexMatched(streams, 'premium-plus'),regexMatched(streams, 'europe'),regexMatched(streams, 'europe-plus'),regexMatched(streams, 'latam'),regexMatched(streams, 'india'),regexMatched(streams, 'india-plus')), regexMatched(streams, 'asia'))",
+    "score": 200,
+    "enabled": true
   },
   {
-    "name": "asia-plus",
-    "pattern": "(?<![A-Za-z0-9])([Aa][Ss][Tt][Rr][Oo]|FRIDAY|IQ|[Ii][Qq][Ii][Yy]|RETRO|[Vv][Ii][Uu])(?=[.\\-_\\s][Ww][Ee][Bb](?:[-.]?(?:[Dd][Ll]|Rip|RIP))?(?![A-Za-z0-9]))",
-    "score": 0
+    "expression": "/*Asia+*/ negate(merge(regexMatched(streams, 'premium'),regexMatched(streams, 'premium-plus'),regexMatched(streams, 'europe'),regexMatched(streams, 'europe-plus'),regexMatched(streams, 'latam'),regexMatched(streams, 'india'),regexMatched(streams, 'india-plus'),regexMatched(streams, 'asia')), regexMatched(streams, 'asia-plus'))",
+    "score": 200,
+    "enabled": true
   },
   {
-    "name": "mideast",
-    "pattern": "^(?!.*(?:[Bb][Ll][Uu][-._ ]?[Rr][Aa][Yy]|[Bb][Dd][Rr][Ii][Pp]|[Bb][Rr][Rr][Ii][Pp]|[Rr][Ee][Mm][Uu][Xx])).*?(?<![A-Za-z0-9])([Bb][Ee][Ii][Nn]|[Bb][Ll][Uu][Tt][Vv]|[Dd][Ii][Gg][Ii][Tt][Uu][Rr][Kk]|[Ee][Xx][Xx][Ee][Nn]|[Jj][Aa][Ww][Ww][Yy]|[Mm][Bb][Cc]|[Oo][Ss][Nn]|[Pp][Uu][Hh][Uu][Tt][Vv]|[Rr][Oo][Tt][Aa][Nn][Aa]|[Ss][Hh][Aa][Hh][Ii][Dd]|[Ss][Hh][Hh][Dd]|[Ss][Tt][Aa][Rr][Zz][Pp][Ll][Aa][Yy]|[Ss][Tt][Zz][Pp]|[Tt][Aa][Bb][Ii][Ii]|[Tt][Rr][Tt][Ii][Zz][Ll][Ee]|[Ww][Aa][Tt][Cc][Hh][Ii][Tt]|[Ww][Ee][Yy][Yy][Aa][Kk]|[Tt][Aa][Pp][Mm][Aa][Dd]|[Uu][Rr][Dd][Uu][Ff][Ll][Ii][Xx]|[Aa][Rr][Yy][Zz][Aa][Pp]|[Aa][Nn][Gg][Hh][Aa][Mm][Ii]|[Ee][Ll][Cc][Ii][Nn][Ee][Mm][Aa]|VIU)(?![A-Za-z0-9])",
-    "score": 0
+    "expression": "/*Mideast*/ negate(merge(regexMatched(streams, 'premium'),regexMatched(streams, 'premium-plus'),regexMatched(streams, 'europe'),regexMatched(streams, 'europe-plus'),regexMatched(streams, 'latam'),regexMatched(streams, 'india'),regexMatched(streams, 'india-plus'),regexMatched(streams, 'asia'),regexMatched(streams, 'asia-plus')), regexMatched(streams, 'mideast'))",
+    "score": 200,
+    "enabled": true
   },
   {
-    "name": "mideast-plus",
-    "pattern": "(?<![A-Za-z0-9])(GAIN|[Tt][Oo][Dd])(?=[.\\-_\\s][Ww][Ee][Bb](?:[-.]?(?:[Dd][Ll]|Rip|RIP))?(?![A-Za-z0-9]))",
-    "score": 0
+    "expression": "/*Mideast+*/ negate(merge(regexMatched(streams, 'premium'),regexMatched(streams, 'premium-plus'),regexMatched(streams, 'europe'),regexMatched(streams, 'europe-plus'),regexMatched(streams, 'latam'),regexMatched(streams, 'india'),regexMatched(streams, 'india-plus'),regexMatched(streams, 'asia'),regexMatched(streams, 'asia-plus'),regexMatched(streams, 'mideast')), regexMatched(streams, 'mideast-plus'))",
+    "score": 200,
+    "enabled": true
   },
   {
-    "name": "africa",
-    "pattern": "^(?!.*(?:[Bb][Ll][Uu][-._ ]?[Rr][Aa][Yy]|[Bb][Dd][Rr][Ii][Pp]|[Bb][Rr][Rr][Ii][Pp]|[Rr][Ee][Mm][Uu][Xx])).*?(?<![A-Za-z0-9])([Dd][Ss][Tt][Vv]|[Ss][Hh][Oo][Ww][Mm][Aa][Xx]|[Ii][Rr][Oo][Kk][Oo][Tt][Vv]|[Ii][Rr][Oo][Kk][Oo]|[Aa][Ff][Rr][Ii][Cc][Aa][Mm][Aa][Gg][Ii][Cc]|[Ss][Hh][Oo][Ww][Mm][Aa][Xx][Pp][Rr][Oo])(?![A-Za-z0-9])",
-    "score": 0
+    "expression": "/*Africa*/ negate(merge(regexMatched(streams, 'premium'),regexMatched(streams, 'premium-plus'),regexMatched(streams, 'europe'),regexMatched(streams, 'europe-plus'),regexMatched(streams, 'latam'),regexMatched(streams, 'india'),regexMatched(streams, 'india-plus'),regexMatched(streams, 'asia'),regexMatched(streams, 'asia-plus'),regexMatched(streams, 'mideast'),regexMatched(streams, 'mideast-plus')), regexMatched(streams, 'africa'))",
+    "score": 200,
+    "enabled": true
   },
   {
-    "name": "cable",
-    "pattern": "^(?!.*(?:[Bb][Ll][Uu][-._ ]?[Rr][Aa][Yy]|[Bb][Dd][Rr][Ii][Pp]|[Bb][Rr][Rr][Ii][Pp]|[Rr][Ee][Mm][Uu][Xx])).*?(?<![A-Za-z0-9])([Aa][Ee][Tt][Vv]|[Bb][Rr][Aa][Vv]|[Cc][Bb][Bb][Cc]|[Cc][Bb][Ee][Ee][Bb][Ii][Ee][Ss]|[Cc][Bb][Ss][Nn]|[Cc][Mm][Tt]|[Cc][Rr][Ii][Tt]|[Cc][Ww][Ss]|[Dd][Aa][Zz][Nn]|[Dd][Cc][Uu]|[Dd][Ss][Nn][Jj][Rr]|[Dd][Ss][Nn][Xx]|[Ee][Ss][Pp][Nn]|[Ff][Yy][Ii]|[Hh][Gg][Tt][Vv]|[Hh][Mm][Rr][Kk]|[Ll][Ii][Ff][Ee][Tt][Ii][Mm][Ee]|[Mm][Aa][Vv][Tt][Vv]|[Mm][Ll][Bb][Nn]|[Nn][Aa][Tt][Gg]|[Nn][Bb][Aa][Tt][Vv]|[Nn][Ff][Ll][Nn]|[Nn][Hh][Ll][Nn]|[Nn][Ii][Cc][Kk][Jj][Rr]|[Nn][Ii][Cc][Kk][Tt][Oo][Oo][Nn][Ss]|[Pp][Aa][Rr][Mm][Tt]|[Pp][Bb][Ss]|[Pp][Bb][Ss][Kk][Ii][Dd][Ss]|[Pp][Oo][Gg][Oo]|[Ss][Hh][Oo][Ww][Cc][Aa][Ss][Ee]|[Ss][Yy][Ff][Yy]|[Tt][Ee][Ll][Ee][Tt][Oo][Oo][Nn]|[Tt][Ll][Cc]|[Tt][Rr][Ee][Ee][Hh][Oo][Uu][Ss][Ee]|[Tt][Rr][Vv][Ll]|[Tt][Vv][Ll]|[Tt][Vv][Ll][Aa][Nn][Dd]|[Uu][Ss][Aa][Nn]|VH1|[Ww][Ww][Ee][Nn]|[Yy][Tt][Vv])(?![A-Za-z0-9])",
-    "score": 0
+    "expression": "/*Cable*/ negate(merge(regexMatched(streams, 'premium'),regexMatched(streams, 'premium-plus'),regexMatched(streams, 'europe'),regexMatched(streams, 'europe-plus'),regexMatched(streams, 'latam'),regexMatched(streams, 'india'),regexMatched(streams, 'india-plus'),regexMatched(streams, 'asia'),regexMatched(streams, 'asia-plus'),regexMatched(streams, 'mideast'),regexMatched(streams, 'mideast-plus'),regexMatched(streams, 'africa')), regexMatched(streams, 'cable'))",
+    "score": 100,
+    "enabled": true
   },
   {
-    "name": "cable-plus",
-    "pattern": "(?<![A-Za-z0-9])([Aa][Bb][Cc]|ALT|APL|BET|BOOM|[Cc][Bb][Ss]|CC|CN|CRIME|CW|[Dd][Ii][Ss][Cc]|DR|[Ee][Rr][Oo][Ss]|[Ff][Oo][Oo][Dd]|FOX|GEM|GOLF|[Hh][Ii][Ss][Tt]|ID|JC|[Jj][Ii][Oo]|LIFE|[Mm][Oo][Tt][Oo][Rr]|MX|[Nn][Bb][Cc]|[Nn][Ii][Cc][Kk]|OWN|QUEST|[Rr][Aa][Ii]|[Ss][Bb][Ss]|SCI|[Ss][Pp][Ii][Kk][Ee]|STAR|[Ss][Tt][Vv]|SUN|[Tt][Bb][Ss]|[Tt][Ee][Nn][Nn][Ii][Ss]|[Tt][Nn][Tt]|VICE|[Vv][Ii][Xx])(?=[.\\-_\\s][Ww][Ee][Bb](?:[-.]?(?:[Dd][Ll]|Rip|RIP))?(?![A-Za-z0-9]))",
-    "score": 0
+    "expression": "/*Cable+*/ negate(merge(regexMatched(streams, 'premium'),regexMatched(streams, 'premium-plus'),regexMatched(streams, 'europe'),regexMatched(streams, 'europe-plus'),regexMatched(streams, 'latam'),regexMatched(streams, 'india'),regexMatched(streams, 'india-plus'),regexMatched(streams, 'asia'),regexMatched(streams, 'asia-plus'),regexMatched(streams, 'mideast'),regexMatched(streams, 'mideast-plus'),regexMatched(streams, 'africa'),regexMatched(streams, 'cable')), regexMatched(streams, 'cable-plus'))",
+    "score": 100,
+    "enabled": true
   },
   {
-    "name": "free",
-    "pattern": "^(?!.*(?:[Bb][Ll][Uu][-._ ]?[Rr][Aa][Yy]|[Bb][Dd][Rr][Ii][Pp]|[Bb][Rr][Rr][Ii][Pp]|[Rr][Ee][Mm][Uu][Xx])).*?(?<![A-Za-z0-9])([Aa][Ss][Ii][Aa][Nn][Cc][Rr][Uu][Ss][Hh]|[Cc][Ii][Nn][Ee][Vv][Ee][Rr][Ss][Ee]|[Cc][Rr][Aa][Cc][Kk][Ll][Ee]|[Cc][Rr][Kk][Ll]|[Dd][Ii][Ss][Tt][Rr][Oo]|[Ff][Aa][Ww][Ee][Ss][Oo][Mm][Ee]|[Ff][Ii][Ll][Mm][Rr][Ii][Ss][Ee]|[Ff][Rr][Ee][Ee][Vv][Ee][Ee]|[Ff][Uu][Bb][Oo]|[Ii][Mm][Dd][Bb][Tt][Vv]|[Mm][Ii][Dd][Nn][Ii][Gg][Hh][Tt][Pp][Uu][Ll][Pp]|[Pp][Hh][Ii][Ll][Oo]|[Pp][Ll][Ee][Xx]|[Pp][Oo][Pp][Ff][Ll][Ii][Cc][Kk]|[Qq][Ii][Bb][Ii]|[Qq][Uu][Ii][Bb][Ii]|[Rr][Ee][Dd][Bb][Oo][Xx]|[Rr][Ee][Tt][Rr][Oo][Cc][Rr][Uu][Ss][Hh]|[Rr][Oo][Kk][Uu]|[Ss][Tt][Ii][Rr][Rr]|[Tt][Uu][Bb][Ii]|[Vv][Uu][Dd][Uu]|[Xx][Uu][Mm][Oo]|[Kk][Aa][Nn][Oo][Pp][Yy]|[Hh][Oo][Oo][Pp][Ll][Aa]|[Ss][Aa][Mm][Ss][Uu][Nn][Gg][Tt][Vv][Pp][Ll][Uu][Ss]|[Ll][Gg][Cc][Hh][Aa][Nn][Nn][Ee][Ll][Ss]|[Rr][Aa][Kk][Uu][Tt][Ee][Nn][Tt][Vv]|[Cc][Ii][Nn][Ee][Vv][Ee][Rr][Ss][Ee]|[Pp][Ll][Ee][Xx][Tt][Vv]|[Tt][Uu][Bb][Ii][Tt][Vv])(?![A-Za-z0-9])",
-    "score": 0
+    "expression": "/*Free*/ negate(merge(regexMatched(streams, 'premium'),regexMatched(streams, 'premium-plus'),regexMatched(streams, 'europe'),regexMatched(streams, 'europe-plus'),regexMatched(streams, 'latam'),regexMatched(streams, 'india'),regexMatched(streams, 'india-plus'),regexMatched(streams, 'asia'),regexMatched(streams, 'asia-plus'),regexMatched(streams, 'mideast'),regexMatched(streams, 'mideast-plus'),regexMatched(streams, 'africa'),regexMatched(streams, 'cable'),regexMatched(streams, 'cable-plus')), regexMatched(streams, 'free'))",
+    "score": 50,
+    "enabled": true
   },
   {
-    "name": "free-plus",
-    "pattern": "(?<![A-Za-z0-9])([Oo][Vv][Ii][Dd]|PLUTO|SHOUT|SLING|TOPIC)(?=[.\\-_\\s][Ww][Ee][Bb](?:[-.]?(?:[Dd][Ll]|Rip|RIP))?(?![A-Za-z0-9]))",
-    "score": 0
+    "expression": "/*Free+*/ negate(merge(regexMatched(streams, 'premium'),regexMatched(streams, 'premium-plus'),regexMatched(streams, 'europe'),regexMatched(streams, 'europe-plus'),regexMatched(streams, 'latam'),regexMatched(streams, 'india'),regexMatched(streams, 'india-plus'),regexMatched(streams, 'asia'),regexMatched(streams, 'asia-plus'),regexMatched(streams, 'mideast'),regexMatched(streams, 'mideast-plus'),regexMatched(streams, 'africa'),regexMatched(streams, 'cable'),regexMatched(streams, 'cable-plus'),regexMatched(streams, 'free')), regexMatched(streams, 'free-plus'))",
+    "score": 50,
+    "enabled": true
   },
   {
-    "name": "cam",
-    "pattern": "(?<![A-Za-z0-9])(CAM|[Hh][Dd][Cc][Aa][Mm]|[Hh][Qq][Cc][Aa][Mm]|CAM[Rr][Ii][Pp]|TS|[Hh][Dd][Tt][Ss]|[Tt][Ee][Ll][Ee][Ss][Yy][Nn][Cc]|[Tt][Ss][Rr][Ii][Pp]|TC|[Hh][Dd][Tt][Cc]|[Tt][Ee][Ll][Ee][Cc][Ii][Nn][Ee]|SCR|[Ss][Cc][Rr][Ee][Ee][Nn][Ee][Rr]|[Dd][Vv][Dd][Ss][Cc][Rr]|[Dd][Vv][Dd][Ss][Cc][Rr][Ee][Ee][Nn][Ee][Rr]|[Ww][Oo][Rr][Kk][Pp][Rr][Ii][Nn][Tt]|WP)(?![A-Za-z0-9])",
-    "score": 0
+    "expression": "/*WEB-DL*/ quality(streams, 'WEB-DL')",
+    "score": 100,
+    "enabled": true
   },
   {
-    "name": "av1",
-    "pattern": "(?<![A-Za-z0-9])[Aa][Vv]1(?![A-Za-z0-9])",
-    "score": 0
+    "expression": "/*WEBRip*/ quality(streams, 'WEBRip')",
+    "score": 40,
+    "enabled": true
   },
   {
-    "name": "hardsubs",
-    "pattern": "(?<![A-Za-z0-9])(HC|[Kk][Oo][Rr][Ss][Uu][Bb]|[Hh][Aa][Rr][Dd][Ss][Uu][Bb][Ss]?)(?![A-Za-z0-9])",
-    "score": 0
+    "expression": "/*REMUX*/ quality(streams, 'BluRay REMUX')",
+    "score": 350,
+    "enabled": true
   },
   {
-    "name": "sample",
-    "pattern": "(?<![A-Za-z0-9])[Ss][Aa][Mm][Pp][Ll][Ee](?![A-Za-z0-9])",
-    "score": 0
+    "expression": "/*BluRay*/ quality(streams, 'BluRay')",
+    "score": 250,
+    "enabled": true
   },
   {
-    "name": "repack",
-    "pattern": "(?<![A-Za-z0-9])([Pp][Rr][Oo][Pp][Ee][Rr]|[Rr][Ee][Pp][Aa][Cc][Kk]|[Rr][Ee][Rr][Ii][Pp])(?![A-Za-z0-9])",
-    "score": 0
+    "expression": "/*CAM-Rip*/ regexMatched(streams, 'cam')",
+    "score": -2000,
+    "enabled": true
   },
   {
-    "name": "group-t1",
-    "pattern": "(?:[-_]|\\[)(?:ABBiE|AJP69|APEX|BLUTONiUM|BYNDR|CMRG|CRFW|CRUD|FLUX|GNOME|HONE|KiNGS|Kitsune|MADSKY|NOSiViD|NTb|NTG|PAXA|PEXA|RAWR|SiC|TEPES|TheFarm|XEPA|ZoroSenpai)(?:\\]|(?![A-Za-z0-9]))",
-    "score": 0
+    "expression": "/*AV1*/ regexMatched(streams, 'av1')",
+    "score": -2000,
+    "enabled": true
   },
   {
-    "name": "group-t2",
-    "pattern": "(?:[-_]|\\[)(?:4KBEC|CEBEX|CiT|dB|EPSiLON|Flights|MiU|monkee|MZABI|PHOENiX|play[Ww][Ee][Bb]|SbR|SMURF|SuccessfulCrab|TOMMY|XEBEC)(?:\\]|(?![A-Za-z0-9]))",
-    "score": 0
+    "expression": "/*HardSubs*/ regexMatched(streams, 'hardsubs')",
+    "score": -500,
+    "enabled": true
   },
   {
-    "name": "group-t3",
-    "pattern": "(?:[-_]|\\[)(?:BLOOM|Dooky|GNOMiSSiON|HH[Ww][Ee][Bb]|NINJACENTRAL|NPMS|ROCCaT|SiGMA|SLiGNOME|SwAgLaNdEr)(?:\\]|(?![A-Za-z0-9]))",
-    "score": 0
+    "expression": "/*HDRip*/ quality(streams, 'HDRip', 'HC HD-Rip')",
+    "score": -300,
+    "enabled": true
   },
   {
-    "name": "group-intl",
-    "pattern": "(?:[-_]|\\[)(?:Archie|BlacKPearL|Dr\\.STAR|DUS|HDHiVE|KHN|MagicStar|Musafirboy|NEXT|PrimeFix|Telly|TombDoc)(?:\\]|(?![A-Za-z0-9]))",
-    "score": 0
+    "expression": "/*DVD*/ quality(streams, 'DVDRip', 'DVD')",
+    "score": -150,
+    "enabled": true
   },
   {
-    "name": "anime-top",
-    "pattern": "(?:[-_]|\\[)(?:0x539|AnoZu|Arg0|Arid|Asakura|Baws|BlackRose|Cyan|Cytox|Dae|FLE|Foxtrot|Gao|Half-Baked|HatSubs|LostYears|LYS1TH3A|MALD|McBalls|MTBB|Okay-Subs|Pizza|Reza|sam|SCY|Setsugen|Slyfox|smol|SoLCE|SoM|SubsPlus|tenshi|Vodes|Z4ST1N|ZeroBuild)(?:\\]|(?![A-Za-z0-9]))",
-    "score": 0
+    "expression": "/*TVRip*/ quality(streams, 'HDTV', 'PDTV', 'SDTV')",
+    "score": -50,
+    "enabled": true
   },
   {
-    "name": "anime-std",
-    "pattern": "(?:[-_]|\\[)(?:9volt|Asenshi|BlueLobster|Chihiro|Commie|DameDesuYo|Doki|Erai-raws|GJM|HorribleRips|HorribleSubs|Kaleido|KAN3D2M|Kantai|KawaSubs|KiyoshiStar|Lia|NanDesuKa|SobsPlease|Some-Stuffs|SubsPlease|ToonsHub|Tsundere|URANIME|VARYG)(?:\\]|(?![A-Za-z0-9]))",
-    "score": 0
+    "expression": "/*Sample*/ regexMatched(streams, 'sample')",
+    "score": -2000,
+    "enabled": true
   },
   {
-    "name": "group-lq",
-    "pattern": "(?:[-_]|\\[)(?:24xHD|41RGB|4K4U|[Aa][Rr][Oo][Mm][Aa]|[Aa][Xx][Xx][Oo]|[Aa][Zz][Aa][Zz][Ee]|[Bb][Aa][Uu][Cc][Kk][Ll][Ee][Yy]|[Bb][Ee][Aa][Ss][Tt]|[Bb][Ii][Tt][Oo][Rr]|[Cc][Dd][Dd][Hh][Dd]|[Cc][Hh][Aa][Oo][Ss]|[Cc][Ll][Ee][Aa][Nn][Uu][Pp]|[Cc][Oo][Ll][Ll][Ee][Cc][Tt][Ii][Vv][Ee]|[Cc][Rr][Ee][Ww][Ss][Aa][Dd][Ee]|[Cc][Tt][Ff][Oo][Hh]|[Ee][Uu][Rr][Ee][Kk][Aa]|[Ff][Rr][Dd][Ss]|[Ff][Zz][Hh][Dd]|[Gg][Aa][Ll][Aa][Xx][Yy][Rr][Gg]|[Gg][Aa][Ll][Aa][Xx][Yy][Tt][Vv]|[Gg][Pp][Tt][Hh][Dd]|[Hh][Dd][Tt][Ii][Mm][Ee]|[Hh][Dd][Ww][Ii][Nn][Gg]|[Ii][Nn][Tt][Ee][Nn][Ss][Oo]|[Ii][Pp][Ll][Aa][Nn][Ee][Tt]|[Kk][Ii][Nn][Gg][Dd][Oo][Mm]|[Kk][Ii][Rr][Aa]|[Ll][Aa][Mm][Aa]|[Ll][Ee][Ff][Ff][Ee]|[Ll][Ii][Gg][Aa][Ss]|[Ll][Uu][Cc][Yy]|[Mm][Aa][Rr][Kk][Ii][Ii]|[Mm][Ee][Gg][Uu][Ss][Tt][Aa]|[Mm][Ee][Ss][Cc]|[Mm][Tt][Ee][Aa][Mm]|[Mm][Yy][Ss][Ii][Ll][Uu]|[Nn][Oo][Gg][Rr][Oo][Uu][Pp]|[Nn][Oo][Gg][Rr][Pp]|[Pp][Aa][Hh][Ee]|[Pp][Aa][Tt][Oo][Mm][Ii][Ee][Ll]|[Pp][Ii][Rr][Aa][Tt][Ee][Ss]|[Pp][Rr][Oo][Dd][Jj][Ii]|[Pp][Tt][Nn][Kk]|[Rr][Aa][Rr][Bb][Gg]|[Rr][Ii][Ff][Ff][Tt][Rr][Aa][Xx]|[Ss][Aa][Nn][Tt][Ii]|[Ss][Hh][Ii][Ee][Ll][Dd][Bb][Ee][Aa][Rr][Ee][Rr]|[Ss][Tt][Uu][Tt][Tt][Ee][Rr][Ss][Hh][Ii][Tt]|[Ss][Uu][Nn][Ss][Cc][Rr][Ee][Ee][Nn]|[Ss][Ww][Tt][Yy][Bb][Ll][Zz]|[Ss][Yy][Nn][Cc][Uu][Pp]|[Tt][Ee][Ee][Ww][Ee][Ee]|[Tt][Ii][Gg][Oo][Ll][Ee]|[Tt][Ii][Kk][Oo]|[Vv][Ii][Ss][Ii][Oo][Nn][Pp][Ll][Uu][Ss][Hh][Dd][Rr]|[Yy][Ii][Ff][Yy]|[Zz][Ee][Uu][Ss]|BARC0DE|BEN[ ._-]THE[ ._-]MEN|C1NEM4|C4K|CHD|CREATiVE24|d3g|D3US|DDR|DNL|FaNGDiNG0|Feranki1980|FGT|FMD|GHD|ION10|iVy|JFF|L0SERNIGHT|Liber8|mHD|mSD|NhaNc3|nHD|nikt0|nSD|OFT|PSA|RBB|RDN|RU4HD|TEKNO3D|Will1869|x0r|YTS)(?:\\]|(?![A-Za-z0-9]))",
-    "score": 0
+    "expression": "/*REPACK*/ regexMatched(streams, 'repack')",
+    "score": 40,
+    "enabled": true
   },
   {
-    "name": "siterips",
-    "pattern": "(?<![A-Za-z0-9])(?:[Vv][Ee][Gg][Aa][Mm][Oo][Vv][Ii][Ee][Ss]|[Vv][Ee][Gg][Aa][Mm][Oo][Vv][Ii][Ee][Ss]|HDHub4u|HDHUB4U|[Mm][Oo][Vv][Ii][Ee][Ss][Ff][Ll][Ii][Xx]|[Tt][Hh][Ee][Mm][Oo][Vv][Ii][Ee][Ss][Ff][Ll][Ii][Xx]|[Mm][Oo][Vv][Ii][Ee][Ss][Mm][Oo][Dd]|[Ff][Ii][Ll][Mm][Yy][Zz][Ii][Ll][Ll][Aa]|[Ff][Ii][Ll][Mm][Yy][Ww][Aa][Pp]|Filmy4wap|Bolly4u|[Kk][Aa][Tt][Mm][Oo][Vv][Ii][Ee][Hh][Dd]|[Kk][Aa][Tt][Mm][Oo][Vv][Ii][Ee]|9xmovies|[Mm][Ll][Ww][Bb][Dd]|[Bb][Ee][Tt][Aa][Mm][Oo][Vv][Ii][Ee][Ss]|7StarHD|[Ee][Tt][Hh][Mm][Oo][Vv][Ii][Ee][Zz]|[Cc][Ii][Nn][Ee][Vv][Oo][Oo][Dd]|[Mm][Kk][Vv][Cc][Ii][Nn][Ee][Mm][Aa][Ss]|[Dd][Ee][Ss][Ii][Rr][Ee][Mm][Oo][Vv][Ii][Ee][Ss]|[Ss][Ss][Rr][Mm][Oo][Vv][Ii][Ee][Ss]|[Ss][Ss][Rr][Mm][Oo][Vv][Ii][Ee][Ss]|[Mm][Oo][Vv][Ii][Ee][Rr][Uu][Ll][Zz]|[Tt][Aa][Mm][Ii][Ll][Rr][Oo][Cc][Kk][Ee][Rr][Ss]|[Tt][Aa][Mm][Ii][Ll][Mm][Vv]|[Tt][Aa][Mm][Ii][Ll][Bb][Ll][Aa][Ss][Tt][Ee][Rr][Ss]|[Ii][Ss][Aa][Ii][Mm][Ii][Nn][Ii]|[Kk][Uu][Tt][Tt][Yy][Mm][Oo][Vv][Ii][Ee][Ss]|[Mm][Oo][Vv][Ii][Ee][Ss][Dd][Aa]|[Tt][Aa][Mm][Ii][Ll][Yy][Oo][Gg][Ii]|[Hh][Dd][Mm][Oo][Vv][Ii][Ee][Ss][Hh][Uu][Bb]|[Ss][Kk][Yy][Mm][Oo][Vv][Ii][Ee][Ss][Hh][Dd]|[Tt][Hh][Ee][Mm][Oo][Vv][Ii][Ee][Hh][Uu][Bb][Ss]|1XBET|[Ee][Zz][Tt][Vv]|[Ee][Zz][Tt][Vv][Xx]?|[Rr][Aa][Rr][Tt][Vv]|TGx)(?![A-Za-z0-9])",
-    "score": 0
+    "expression": "/*🥇Group*/ regexMatched(streams, 'group-t1')",
+    "score": 50,
+    "enabled": true
   },
   {
-    "name": "scene",
-    "pattern": "(?:[-_]|\\[)(?:B2B|BAE|BTW|CAKES|DEFLATE|DIRT|EDITH|ELEANOR|ETHEL|GGEZ|GGWP|GLHF|GOSSIP|INFLATE|KOGi|MiNX|NAISU|NHTFS|PECULATE|SLOT|SPAMnEGGS|STRiKES|SuRCODE|SYNCOPY|T6D|W4K)(?:\\]|(?![A-Za-z0-9]))",
-    "score": 0
+    "expression": "/*🥈Group*/ regexMatched(streams, 'group-t2')",
+    "score": 40,
+    "enabled": true
   },
   {
-    "name": "anime-bd-top",
-    "pattern": "(?:[-_]|\\[)(?:Aergia|DemiHuman|FateSucks|Flugel|HcHcSen|Hydes|JohnTitor|JySzE|Koala|Kulot|LULU|MeaKes|Moxie|Orphan|Yuri)(?:\\]|(?![A-Za-z0-9]))",
-    "score": 0
+    "expression": "/*🥉Group*/ regexMatched(streams, 'group-t3')",
+    "score": 30,
+    "enabled": true
   },
   {
-    "name": "anime-bd-mid",
-    "pattern": "(?:[-_]|\\[)(?:ARC|BBT-RMX|Cappybara|ChucksMux|Crucible|Deanzel|E-D|Exiled-Destiny|FFF|Fig|Headpatter|Holomux|Inka-Subs|Kaleido-subs|Kametsu|LaCroix|Legion|MottoJ|Mysteria|Nan0|Nekotan|Netaro|NPZ|NTRX|PMR|Rain|Rudy|Sekkon|Serendipity|SGT|SubsMix|Thora|ULTRAREMUX|Vivid)(?:\\]|(?![A-Za-z0-9]))",
-    "score": 0
+    "expression": "/*🌏Group*/ regexMatched(streams, 'group-intl')",
+    "score": 40,
+    "enabled": true
   },
   {
-    "name": "fr-anime",
-    "pattern": "(?:[-_]|\\[)(?:Aoi-Project|BLV|Darki|Delivroozzi|Elecman|Fuceo|FUJiSAN|Galactic|GundamGuy|HANAMi|IssouCorp|KAF|KHAYA|matheousse|Nagutos|NeoSG|OECUF|Punisher694|RONiN|SR-71|T3KASHi|TANOSHii|TheFantastics|Tsundere-Raws)(?:\\]|(?![A-Za-z0-9]))",
-    "score": 0
+    "expression": "/*🎌Elite*/ regexMatched(streams, 'anime-top')",
+    "score": 35,
+    "enabled": true
   },
   {
-    "name": "anime-lq",
-    "pattern": "(?:[-_]|\\[)(?:AnimeDynastyEN|AnimeKuro|AnimeRG|ANiMeSuBs|AniVoid|ASW|Bonkai77|Cerberus|Cleo|DeadMau|Deadpool|DKB|Golumpa|HatsuYuki|HollowRoxas|IPUNISHER|JacobSwaggedUp|KaiDubs|Kallango|Koi|KRP|Lilith|LoliHouse|LowPower|MinionMTBB|Moozzi2|Nanako|Neko|Nyanpasu|Ohys|Ohys-Raws|Pantsu|PuyaSubs|Rando235|Raze|Reaktor|Reinforce|SAD|Sensei|ShincapS|StrayGods|Tenrai|TopKek|Torenter69|Trix|U3-WEB|YakuboEncodes|Yameii|YuiSubs|Yun|ZZA)(?:\\]|(?![A-Za-z0-9]))",
-    "score": 0
+    "expression": "/*🎌Group*/ regexMatched(streams, 'anime-std')",
+    "score": 20,
+    "enabled": true
   },
   {
-    "name": "obfuscated",
-    "pattern": "(?:[-_]|\\[)(?:AsRequested|buymore|captcha|chamele0n|inc0gnito|nzbgeek|postbot|RAKUV|scrambled|WhiteRev|WRTeam|xpost)(?:\\]|(?![A-Za-z0-9]))",
-    "score": 0
+    "expression": "/*🗑️Group*/ regexMatched(streams, 'group-lq')",
+    "score": -200,
+    "enabled": true
+  },
+  {
+    "expression": "/*🚫SiteRip*/ regexMatched(streams, 'siterips')",
+    "score": -300,
+    "enabled": true
+  },
+  {
+    "expression": "/*♨️Usenet*/ type(streams, 'usenet')",
+    "score": 0,
+    "enabled": true
+  },
+  {
+    "expression": "/*✨HDR*/ visualTag(streams, 'HDR', 'HDR10', 'HDR10+')",
+    "score": 25,
+    "enabled": true
+  },
+  {
+    "expression": "/*✨HLG*/ visualTag(streams, 'HLG')",
+    "score": 15,
+    "enabled": true
+  },
+  {
+    "expression": "/*⬆️Upscale*/ visualTag(streams, 'AI', 'Upscaled')",
+    "score": -50,
+    "enabled": true
+  },
+  {
+    "expression": "/*1080p*/ resolution(streams, '1080p')",
+    "score": 180,
+    "enabled": true
+  },
+  {
+    "expression": "/*4K*/ resolution(streams, '2160p')",
+    "score": 120,
+    "enabled": true
+  },
+  {
+    "expression": "/*1440p*/ resolution(streams, '1440p')",
+    "score": 100,
+    "enabled": true
+  },
+  {
+    "expression": "/*HEVC*/ encode(streams, 'HEVC')",
+    "score": 15,
+    "enabled": true
+  },
+  {
+    "expression": "/*AVC*/ encode(streams, 'AVC')",
+    "score": 10,
+    "enabled": true
+  },
+  {
+    "expression": "/*🪫Mini4K*/ isAnime ? size(resolution(streams, '2160p'), 0, '1GB') : queryType == 'movie' ? size(resolution(streams, '2160p'), 0, '6GB') : size(resolution(streams, '2160p'), 0, '2GB')",
+    "score": -250,
+    "enabled": true
+  },
+  {
+    "expression": "/*🪫Mini1080p*/ isAnime ? size(resolution(streams, '1080p'), 0, '200MB') : queryType == 'movie' ? size(resolution(streams, '1080p'), 0, '1500MB') : size(resolution(streams, '1080p'), 0, '300MB')",
+    "score": -100,
+    "enabled": true
+  },
+  {
+    "expression": "/*720p*/ resolution(streams, '720p')",
+    "score": 60,
+    "enabled": true
+  },
+  {
+    "expression": "/*Scene*/ regexMatched(streams, 'scene')",
+    "score": 30,
+    "enabled": true
+  },
+  {
+    "expression": "/*🎌BD+*/ regexMatched(streams, 'anime-bd-top')",
+    "score": 50,
+    "enabled": true
+  },
+  {
+    "expression": "/*🎌BD*/ regexMatched(streams, 'anime-bd-mid')",
+    "score": 35,
+    "enabled": true
+  },
+  {
+    "expression": "/*🇫🇷Anime*/ regexMatched(streams, 'fr-anime')",
+    "score": 40,
+    "enabled": true
+  },
+  {
+    "expression": "/*🗑️Anime*/ regexMatched(streams, 'anime-lq')",
+    "score": -150,
+    "enabled": true
+  },
+  {
+    "expression": "/*❓Obfus*/ regexMatched(streams, 'obfuscated')",
+    "score": -100,
+    "enabled": true
+  },
+  {
+    "expression": "/*💪4K*/ isAnime ? size(resolution(streams, '2160p'), '2GB') : queryType == 'movie' ? size(resolution(streams, '2160p'), '8GB') : size(resolution(streams, '2160p'), '3GB')",
+    "score": 25,
+    "enabled": true
+  },
+  {
+    "expression": "/*💪1080p*/ isAnime ? size(resolution(streams, '1080p'), '1GB') : queryType == 'movie' ? size(resolution(streams, '1080p'), '5GB') : size(resolution(streams, '1080p'), '2GB')",
+    "score": 40,
+    "enabled": true
+  },
+  {
+    "expression": "/*❔Src*/ negate(merge(regexMatched(streams, 'premium'),regexMatched(streams, 'premium-plus'),regexMatched(streams, 'europe'),regexMatched(streams, 'europe-plus'),regexMatched(streams, 'latam'),regexMatched(streams, 'india'),regexMatched(streams, 'india-plus'),regexMatched(streams, 'asia'),regexMatched(streams, 'asia-plus'),regexMatched(streams, 'mideast'),regexMatched(streams, 'mideast-plus'),regexMatched(streams, 'africa'),regexMatched(streams, 'cable'),regexMatched(streams, 'cable-plus'),regexMatched(streams, 'free'),regexMatched(streams, 'free-plus')), quality(streams, 'WEB-DL', 'WEBRip'))",
+    "score": 200,
+    "enabled": true
+  },
+  {
+    "expression": "/*♻️RipSrc*/ quality(merge(regexMatched(streams, 'premium'), regexMatched(streams, 'premium-plus'), regexMatched(streams, 'europe'), regexMatched(streams, 'europe-plus'), regexMatched(streams, 'latam'), regexMatched(streams, 'india'), regexMatched(streams, 'india-plus'), regexMatched(streams, 'asia'), regexMatched(streams, 'asia-plus'), regexMatched(streams, 'mideast'), regexMatched(streams, 'mideast-plus'), regexMatched(streams, 'africa'), regexMatched(streams, 'cable'), regexMatched(streams, 'cable-plus'), regexMatched(streams, 'free'), regexMatched(streams, 'free-plus')), 'WEBRip')",
+    "score": -100,
+    "enabled": true
   }
 ]
