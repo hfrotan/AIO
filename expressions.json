@@ -121,7 +121,7 @@
   },
   {
     "expression": "/*DVD*/ quality(streams, 'DVDRip', 'DVD')",
-    "score": -150,
+    "score": 0,
     "enabled": true
   },
   {
@@ -171,7 +171,7 @@
   },
   {
     "expression": "/*🗑️Group*/ regexMatched(streams, 'group-lq')",
-    "score": -200,
+    "score": 0,
     "enabled": true
   },
   {
@@ -225,7 +225,7 @@
     "enabled": true
   },
   {
-    "expression": "/*🪫Mini4K*/ isAnime ? size(resolution(streams, '2160p'), 0, '1GB') : queryType == 'movie' ? size(resolution(streams, '2160p'), 0, '6GB') : size(resolution(streams, '2160p'), 0, '2GB')",
+    "expression": "/*🪫Mini4K*/ isAnime ? size(resolution(streams, '2160p'), 0, '1GB') : queryType == 'movie' ? size(resolution(streams, '2160p'), 0, '4GB') : size(resolution(streams, '2160p'), 0, '1500MB')",
     "score": -250,
     "enabled": true
   },
@@ -261,12 +261,12 @@
   },
   {
     "expression": "/*🗑️Anime*/ regexMatched(streams, 'anime-lq')",
-    "score": -150,
+    "score": 0,
     "enabled": true
   },
   {
     "expression": "/*❓Obfus*/ regexMatched(streams, 'obfuscated')",
-    "score": -100,
+    "score": 0,
     "enabled": true
   },
   {
