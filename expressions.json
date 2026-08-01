@@ -216,12 +216,12 @@
   },
   {
     "expression": "/*HEVC*/ encode(streams, 'HEVC')",
-    "score": 15,
+    "score": 100,
     "enabled": true
   },
   {
     "expression": "/*AVC*/ encode(streams, 'AVC')",
-    "score": 10,
+    "score": 90,
     "enabled": true
   },
   {
@@ -287,6 +287,11 @@
   {
     "expression": "/*♻️RipSrc*/ quality(merge(regexMatched(streams, 'premium'), regexMatched(streams, 'premium-plus'), regexMatched(streams, 'europe'), regexMatched(streams, 'europe-plus'), regexMatched(streams, 'latam'), regexMatched(streams, 'india'), regexMatched(streams, 'india-plus'), regexMatched(streams, 'asia'), regexMatched(streams, 'asia-plus'), regexMatched(streams, 'mideast'), regexMatched(streams, 'mideast-plus'), regexMatched(streams, 'africa'), regexMatched(streams, 'cable'), regexMatched(streams, 'cable-plus'), regexMatched(streams, 'free'), regexMatched(streams, 'free-plus')), 'WEBRip')",
     "score": -100,
+    "enabled": true
+  },
+  {
+    "expression": "/*❔Codec*/ negate(merge(encode(streams, 'HEVC'), encode(streams, 'AVC')), streams)",
+    "score": -60,
     "enabled": true
   }
 ]
