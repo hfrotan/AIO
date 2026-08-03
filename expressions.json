@@ -296,12 +296,12 @@
   },
   {
     "expression": "/*🗣️EN*/ language(streams, 'English')",
-    "score": 80,
+    "score": 120,
     "enabled": true
   },
   {
     "expression": "/*🗣️Dual*/ regexMatched(streams, 'dual-audio')",
-    "score": 40,
+    "score": 0,
     "enabled": true
   }
 ]
