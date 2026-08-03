@@ -173,5 +173,10 @@
     "name": "obfuscated",
     "pattern": "(?:[-_]|\\[)(?:AsRequested|buymore|captcha|chamele0n|inc0gnito|nzbgeek|postbot|RAKUV|scrambled|WhiteRev|WRTeam|xpost)(?:\\]|(?![A-Za-z0-9]))",
     "score": 0
+  },
+  {
+    "name": "dual-audio",
+    "pattern": "(?<![A-Za-z0-9])([Dd][Uu][Aa][Ll][-._ ]?[Aa][Uu][Dd][Ii][Oo]|[Mm][Uu][Ll][Tt][Ii]|[Dd][Uu][Aa][Ll])(?![A-Za-z0-9])",
+    "score": 0
   }
 ]
