@@ -91,12 +91,12 @@
   },
   {
     "expression": "/*REMUX*/ quality(streams, 'BluRay REMUX')",
-    "score": 350,
+    "score": 60,
     "enabled": true
   },
   {
     "expression": "/*BluRay*/ quality(streams, 'BluRay')",
-    "score": 250,
+    "score": 100,
     "enabled": true
   },
   {
@@ -246,12 +246,12 @@
   },
   {
     "expression": "/*🎌BD+*/ regexMatched(streams, 'anime-bd-top')",
-    "score": 50,
+    "score": 0,
     "enabled": true
   },
   {
     "expression": "/*🎌BD*/ regexMatched(streams, 'anime-bd-mid')",
-    "score": 35,
+    "score": 0,
     "enabled": true
   },
   {
