@@ -293,15 +293,5 @@
     "expression": "/*❔Codec*/ negate(merge(encode(streams, 'HEVC'), encode(streams, 'AVC')), streams)",
     "score": -60,
     "enabled": true
-  },
-  {
-    "expression": "/*🗣️EN*/ language(streams, 'English')",
-    "score": 120,
-    "enabled": true
-  },
-  {
-    "expression": "/*🗣️Dual*/ regexMatched(streams, 'dual-audio')",
-    "score": 0,
-    "enabled": true
   }
 ]
