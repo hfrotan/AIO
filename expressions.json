@@ -293,5 +293,10 @@
     "expression": "/*❔Codec*/ negate(merge(encode(streams, 'HEVC'), encode(streams, 'AVC')), streams)",
     "score": -60,
     "enabled": true
+  },
+  {
+    "expression": "/*❔Src?*/ negate(quality(streams, 'WEB-DL', 'WEBRip', 'BluRay', 'BluRay REMUX', 'HDRip', 'HC HD-Rip', 'DVDRip', 'DVD', 'HDTV', 'PDTV', 'SDTV', 'CAM', 'TS', 'TC', 'SCR'), streams)",
+    "score": -60,
+    "enabled": true
   }
 ]
