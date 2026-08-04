@@ -91,12 +91,12 @@
   },
   {
     "expression": "/*REMUX*/ quality(streams, 'BluRay REMUX')",
-    "score": 60,
+    "score": 100,
     "enabled": true
   },
   {
     "expression": "/*BluRay*/ quality(streams, 'BluRay')",
-    "score": 100,
+    "score": 200,
     "enabled": true
   },
   {
