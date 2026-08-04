@@ -286,7 +286,7 @@
   },
   {
     "expression": "/*♻️RipSrc*/ quality(merge(regexMatched(streams, 'premium'), regexMatched(streams, 'premium-plus'), regexMatched(streams, 'europe'), regexMatched(streams, 'europe-plus'), regexMatched(streams, 'latam'), regexMatched(streams, 'india'), regexMatched(streams, 'india-plus'), regexMatched(streams, 'asia'), regexMatched(streams, 'asia-plus'), regexMatched(streams, 'mideast'), regexMatched(streams, 'mideast-plus'), regexMatched(streams, 'africa'), regexMatched(streams, 'cable'), regexMatched(streams, 'cable-plus'), regexMatched(streams, 'free'), regexMatched(streams, 'free-plus')), 'WEBRip')",
-    "score": -100,
+    "score": -50,
     "enabled": true
   },
   {
