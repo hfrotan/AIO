@@ -173,5 +173,10 @@
     "name": "obfuscated",
     "pattern": "(?:[-_]|\\[)(?:AsRequested|buymore|captcha|chamele0n|inc0gnito|nzbgeek|postbot|RAKUV|scrambled|WhiteRev|WRTeam|xpost)(?:\\]|(?![A-Za-z0-9]))",
     "score": 0
+  },
+  {
+    "name": "threed",
+    "pattern": "(?<![A-Za-z0-9])(3D|[Hh][-._ ]?[Ss][Bb][Ss]|[Ss][Bb][Ss]|[Hh][-._ ]?[Oo][Uu]|[Hh][Aa][Ll][Ff][-._ ]?[Oo][Uu]|[Aa][Nn][Aa][Gg][Ll][Yy][Pp][Hh]|[Mm][Vv][Cc])(?![A-Za-z0-9])",
+    "score": 0
   }
 ]
