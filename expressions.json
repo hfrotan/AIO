@@ -303,5 +303,10 @@
     "expression": "/*🥽3D*/ regexMatched(streams, 'threed')",
     "score": -2000,
     "enabled": true
+  },
+  {
+    "expression": "/*🦻AD*/ regexMatched(streams, 'audio-desc')",
+    "score": -2000,
+    "enabled": true
   }
 ]
