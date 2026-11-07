@@ -308,10 +308,5 @@
     "expression": "/*🦻AD*/ regexMatched(streams, 'audio-desc')",
     "score": -2000,
     "enabled": true
-  },
-  {
-    "expression": "/*🎭Fake*/ regexMatched(streams, 'fake')",
-    "score": -600,
-    "enabled": true
   }
 ]
