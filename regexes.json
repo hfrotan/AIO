@@ -183,5 +183,10 @@
     "name": "audio-desc",
     "pattern": "(?<![A-Za-z0-9])(?:[Aa][Uu][Dd][Ii][Oo][-._ ]?[Dd][Ee][Ss][Cc][Rr][Ii][Pp][Tt][Ii][Oo][Nn]|[Dd][Ee][Ss][Cc][Rr][Ii][Pp][Tt][Ii][Vv][Ee]([-._ ]?[Aa][Uu][Dd][Ii][Oo])?|(?<=[0-9][.][0-9][-._ ])AD|(?<=[Aa][Tt][Mm][Oo][Ss][-._ ])AD|(?<=AD[-._ ])AD)(?![A-Za-z0-9])",
     "score": 0
+  },
+  {
+    "name": "fake",
+    "pattern": "(?<![A-Za-z0-9])(?:(?:DDP?|DD\\+|EAC3|E-AC-3|AC3|AAC)[1-8] [01](?![0-9])|[HhXx] 26[45](?![0-9])|NL[-._ ]?[Ss][Uu][Bb][Ss]?)",
+    "score": 0
   }
 ]
